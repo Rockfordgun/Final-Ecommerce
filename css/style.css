@@ -1,0 +1,52 @@
+/*
+--------------
+Font Imports
+--------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;1,800&display=swap');
+
+
+
+:root {
+
+    --clr-primary: #8F6593;
+    --clr-primary-sec-dark: #3B252C;
+    --clr-primary-light: #AEA4BF;
+    --clr-primary-very-light: #CDCDCD;
+
+    /*Greys*/
+
+    --clr-grey-1: #525252;
+    --clr-grey-1: #8E8E8E;
+    --clr-grey-1: #9F9F9F;
+      
+    --clr-white: #fff;
+
+    /*Fonts*/
+
+    --ff-primary: 'Noto Sans', sans-serif;
+    --ff-secondary: 'Bebas Neue', cursive;
+
+    /*Other*/
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+
+    --fluid-width: 90vw;
+    --max-width: 1170px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    
+    margin: 0 auto;
+    width: var(--max-width);
+
+}
