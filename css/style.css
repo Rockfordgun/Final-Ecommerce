@@ -35,6 +35,8 @@ Font Imports
 
     --fluid-width: 90vw;
     --max-width: 1170px;
+
+
 }
 
 * {
@@ -51,4 +53,34 @@ body {
 
 }
 
+h1 {
+    font-family: var(--ff-secondary);
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+h6 {
+    
+}
+
+.topNav {
+
+    background-color: red;
+    width: var(--max-width);
+    height: 2rem;
+}
 
