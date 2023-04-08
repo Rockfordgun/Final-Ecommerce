@@ -15,6 +15,10 @@ Font Imports
     --clr-primary-light: #AEA4BF;
     --clr-primary-very-light: #CDCDCD;
 
+    /*Secondary Colors*/
+    --clr-secondary-light: #B8DBD9;
+    --clr-secondary-dark: #1F7A8C;
+
     /*Greys*/
 
     --clr-grey-1: #525252;
@@ -47,9 +51,8 @@ Font Imports
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    
     margin: 0 auto;
-    width: var(--max-width);
+
 
 }
 
@@ -77,10 +80,151 @@ h6 {
     
 }
 
-.topNav {
-
-    background-color: red;
-    width: var(--max-width);
-    height: 2rem;
+/*Hero Banner*/
+.hero {
+    min-height: 50vh;
+    background: var(--clr-grey-1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+   color: var(--clr-white);
 }
 
+.hero-banner {
+    transition: var(--transition);
+}
+
+hr {
+    width: 80%;
+    color: var(--clr-white);
+}
+
+.hero-banner h6 {
+    font-family: var(--ff-secondary);
+    font-size: 1.5rem;
+}
+
+.hero-banner h4 {
+    font-family: var(--ff-secondary);
+    font-size: 2rem;
+}
+
+.hero-banner h2 {
+    font-family: var(--ff-secondary);
+    font-size: 3.5rem;
+}
+
+
+.btn{
+    background: none;
+    border: 1px solid white;
+    font-weight: 600;
+    padding: .5rem 2rem .5rem 2rem;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btnHero:hover {
+    background: var(--clr-primary);
+    border: 1px solid white;
+    font-weight: 300;
+    padding: .5rem 2rem .5rem 2rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+/*Navigation*/
+
+.topNav {
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 3rem;
+    animation: ;
+    justify-content: space-between;
+}
+
+.topNav p {
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: 900;
+    animation-name: letterRun;
+    animation-duration: 30s;
+    animation-iteration-count: 20;
+
+}
+
+#mainNav {
+    background: var(--clr-secondary-dark);
+    height: 5rem;
+}
+
+#shopNav {
+    background: var(--clr-white);
+    height: 3rem;
+}
+
+
+
+
+
+
+
+/*Animations*/
+
+@keyframes letterRun {
+    0% {
+        transform: translateX(20);
+    }
+
+
+    100% {
+        transform: translateX(-300%);
+    }
+
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width: 1170px){
+
+    .hero {
+    min-height: 100vh;
+    background: linear-gradient(rgb(44,174,186,0.7),rgba(0,0,0,0.7)) ,url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
+    }
+
+    .hero-banner h6 {
+        font-size: 3rem;
+    }
+
+    .hero-banner h4 {
+
+        font-size: 6rem;
+    }
+    
+    .hero-banner h2 {
+
+        font-size: 10rem;
+    }
+
+
+
+@media screen and (min-width: 768px){
+
+    .hero {
+    min-height: 100vh;
+    background-color: #8F6593;
+
+    }
+
+
+}
