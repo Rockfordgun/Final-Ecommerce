@@ -24,7 +24,7 @@ Font Imports
     --clr-grey-1: #525252;
     --clr-grey-1: #8E8E8E;
     --clr-grey-1: #9F9F9F;
-      
+
     --clr-white: #fff;
 
     /*Fonts*/
@@ -60,25 +60,28 @@ h1 {
     font-family: var(--ff-secondary);
 }
 
-h2 {
-    
-}
+h2 {}
 
-h3 {
-    
-}
+h3 {}
 
-h4 {
-    
-}
+h4 {}
 
-h5 {
-    
-}
+h5 {}
 
-h6 {
-    
+h6 {}
+
+/*
+.section-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding: 10% 0 5% 0;
+    color: var(--clr-secondary-dark);
+    text-de coration: underline;
 }
+*/
+
+
 
 /*Hero Banner*/
 .hero {
@@ -88,7 +91,7 @@ h6 {
     justify-content: flex-start;
     align-items: center;
     padding: 0 5% 0 5%;
-   color: var(--clr-white);
+    color: var(--clr-white);
 }
 
 .hero-banner {
@@ -116,11 +119,13 @@ hr {
 }
 
 
-.btn{
-    background: none;
-    border: 1px solid white;
-    font-weight: 600;
+.btn {
+    background-color: var(--clr-primary);
+    font-weight: 800;
+    color: var(--clr-white);
+    text-decoration: none;
     padding: .5rem 2rem .5rem 2rem;
+    text-transform: uppercase;
     border-radius: var(--radius);
     transition: var(--transition);
     cursor: pointer;
@@ -134,12 +139,7 @@ hr {
 
 }
 
-a {
-    text-decoration: none;
-    color: var(--clr-white);
-}
-
-/*Navigation*/
+/*Navigation & Drop Downs*/
 
 .topNav {
     width: 100%;
@@ -172,6 +172,65 @@ a {
     height: 3rem;
 }
 
+.option-text {
+    text-decoration: none;
+}
+
+.options-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--clr-secondary-dark);
+
+}
+
+.show-options {
+    height: fit-content;
+    transition: all 0.3s linear;
+}
+
+
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    align-items: center;
+
+}
+
+.title-select {
+    display: inline-flex;
+}
+
+
+.btn_NA {
+    padding: 5% 0 2% 0;
+    width: 150px;
+    background: none;
+    border: none;
+    color: var(--clr-secondary-dark);
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.icon {
+    color: var(--clr-secondary-dark);
+    padding-top: 4%;
+}
+
+.icon:hover {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    animation: bounce 1.5s ease-in-out;
+}
+
+
+
+
 
 
 
@@ -192,14 +251,33 @@ a {
 
 }
 
+@keyframes bounce {
 
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
 
 /* Media Queries */
-@media screen and (min-width: 1170px){
+
+/*PC*/
+@media screen and (min-width: 1170px) {
 
     .hero {
-    min-height: 100vh;
-    background: linear-gradient(rgb(44,174,186,0.7),rgba(0,0,0,0.7)) ,url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
+        height: 80vh;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
     }
 
     .hero-banner h6 {
@@ -210,21 +288,70 @@ a {
 
         font-size: 6rem;
     }
-    
+
     .hero-banner h2 {
 
         font-size: 10rem;
     }
 
+    .titleLine {
+        visibility: none;
+    }
+
+}
 
 
-@media screen and (min-width: 768px){
+/*Tablet*/
+@media screen and (min-width: 768px) {
 
     .hero {
-    min-height: 100vh;
-    background-color: #8F6593;
+        min-height: 50vh;
+        background-color: #0473f3;
 
     }
 
+    .titleLine {
+        width: 50px;
+    }
+
+    .icon {
+        visibility: hidden;
+    }
+
+
+
+    .toggleDD:before,
+    .toggleDD:after {
+        color: var(--clr-secondary-dark);
+        content: "";
+        display: inline-block;
+        width: 250px;
+        margin: 0 3em 0 -55%;
+        vertical-align: middle;
+        border-bottom: 1px solid;
+    }
+
+    .toggleDD:after {
+        margin: 0 -55% 0 3em;
+    }
+
+    .options-container {
+
+
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        align-items: center;
+    }
+
+    .option {
+        display: inline-flex;
+        font-size: 0.9rem;
+        margin: 0 3px;
+    }
+
+    .title-select {
+        text-align: center;
+    }
 
 }
