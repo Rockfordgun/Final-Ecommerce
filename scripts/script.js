@@ -1,5 +1,5 @@
 /*Drop Down Menu*/
-const menuSelect = document.querySelector(".toggleDD");
+const menuSelect = document.querySelector(".title-select");
 const optionsCon = document.querySelector(".options-container");
 const optionList = document.querySelector(".options");
 

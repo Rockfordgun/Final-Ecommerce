@@ -47,6 +47,7 @@ Font Imports
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
@@ -60,26 +61,30 @@ h1 {
     font-family: var(--ff-secondary);
 }
 
-h2 {}
+h2 {
+    color: var(--clr-secondary-dark);
+    text-transform: uppercase;
+}
 
 h3 {}
 
-h4 {}
+h4 {
+    color: var(--clr-secondary-dark);
+    text-transform: uppercase;
+    font-weight: 400;
+}
 
 h5 {}
 
 h6 {}
 
-/*
-.section-title {
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    padding: 10% 0 5% 0;
-    color: var(--clr-secondary-dark);
-    text-de coration: underline;
+.section {}
+
+.section-center {
+    width: 100vw;
+    margin: 0 auto;
+    max-width: 1400px;
 }
-*/
 
 
 
@@ -110,17 +115,19 @@ hr {
 
 .hero-banner h4 {
     font-family: var(--ff-secondary);
+    color: var(--clr-white);
     font-size: 2rem;
 }
 
 .hero-banner h2 {
     font-family: var(--ff-secondary);
+    color: var(--clr-white);
     font-size: 3.5rem;
 }
 
 
 .btn {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-secondary-dark);
     font-weight: 800;
     color: var(--clr-white);
     text-decoration: none;
@@ -228,12 +235,175 @@ hr {
     animation: bounce 1.5s ease-in-out;
 }
 
+/*Product*/
+.category {
+    position: relative;
+}
+
+.newProducts {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.NA-products {
 
 
+    width: 261px;
+    height: 30rem;
+    margin-left: 20px;
+}
 
+.imageContainer {
 
+    width: 261px;
+    height: 30rem;
 
+}
 
+.quickAdd {
+    display: flex;
+    align-items: center;
+    background: var(--clr-secondary-dark);
+    justify-content: center;
+    font-weight: 800;
+    color: var(--clr-white);
+    width: 261px;
+    height: 2rem;
+    visibility: show;
+}
+
+.productDetails {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.image {
+    height: 250px;
+    background: url(../img/placeholder\ sample.jpg) center/cover no-repeat;
+}
+
+.NewestProducts {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Product Category*/
+
+.image-Wfashion {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3%;
+    justify-content: flex-start;
+    background: url(../img/womanfashion.jpg) center/cover no-repeat;
+    height: 242px;
+}
+
+.WFashion-title {
+    background-color: var(--clr-white);
+    width: 200px;
+    height: 2rem;
+
+    color: var(--clr-secondary-dark);
+
+}
+
+.image-Mfashion {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 3%;
+    background: url(../img/fashiondude.jpg) center/cover no-repeat;
+    height: 242px;
+}
+
+.MFashion-title {
+    background-color: var(--clr-white);
+    width: 200px;
+    height: 2rem;
+    color: var(--clr-secondary-dark);
+
+}
+
+.image-Sunglass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url(../img/sunglassesmenu.jpg) center/cover no-repeat;
+    height: 150px;
+    width: 360px;
+}
+
+.Sunglass-title {
+    background-color: var(--clr-white);
+    width: 200px;
+    height: 2rem;
+    color: var(--clr-secondary-dark);
+
+}
+
+.image-Shoes {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-top: 3%;
+
+    background: url(../img/shoesMenu.jpg) center/cover no-repeat;
+    height: 150px;
+    width: 360px;
+}
+
+.Shoes-title {
+    background-color: var(--clr-white);
+    width: 200px;
+    height: 2rem;
+    color: var(--clr-secondary-dark);
+
+}
+
+.image-Acc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3%;
+    background: url(../img/accessories.jpg) center/cover no-repeat;
+    height: 150px;
+    width: 360px;
+}
+
+.Acc-title {
+    background-color: var(--clr-white);
+    width: 200px;
+    height: 2rem;
+    color: var(--clr-secondary-dark);
+
+}
+
+/*Features*/
+.featured {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.image-Featured {
+    justify-content: center;
+    background-color: #0473f3;
+    margin: 0 auto;
+    width: 80vw;
+    height: 40vh;
+}
+
+.btn-Feature {
+
+    margin: 0 auto;
+    font-weight: 800;
+    color: var(--clr-white);
+    width: 100vw;
+    height: 1.5rem;
+    background: var(--clr-secondary-dark);
+}
 
 
 
@@ -272,37 +442,11 @@ hr {
 
 /* Media Queries */
 
-/*PC*/
-@media screen and (min-width: 1170px) {
 
-    .hero {
-        height: 80vh;
-        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
-    }
-
-    .hero-banner h6 {
-        font-size: 3rem;
-    }
-
-    .hero-banner h4 {
-
-        font-size: 6rem;
-    }
-
-    .hero-banner h2 {
-
-        font-size: 10rem;
-    }
-
-    .titleLine {
-        visibility: none;
-    }
-
-}
 
 
 /*Tablet*/
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     .hero {
         min-height: 50vh;
@@ -354,4 +498,215 @@ hr {
         text-align: center;
     }
 
+
+    #NA-products {
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+        height: 25rem;
+
+    }
+
+    .newProducts {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+
+    }
+
+    .NewestProducts {
+        padding: 10px;
+    }
+
+    /*category*/
+
+
+    .WFashion-title {
+        font-size: 1rem;
+        height: 1.2rem;
+    }
+
+
+
+    .MFashion-title {
+        font-size: 1rem;
+        height: 1.2rem;
+
+    }
+
+    .image-Sunglass {
+        justify-content: flex-start;
+        padding-top: 3%;
+        width: 108%;
+    }
+
+    .Sunglass-title {
+        font-size: 1rem;
+        height: 1.2rem;
+
+    }
+
+    .image-Shoes {
+
+        width: 108%;
+    }
+
+    .Shoes-title {
+        font-size: 1rem;
+        height: 1.2rem;
+
+    }
+
+    .image-Acc {
+        justify-content: flex-end;
+        width: 108%;
+    }
+
+    .Acc-title {
+        font-size: 1rem;
+        height: 1.2rem;
+
+    }
+
+    .image-Featured {
+
+        width: 80%;
+        height: 500px;
+    }
+
+    .btn-Feature {
+
+        width: 50%;
+        height: 2rem;
+
+    }
+
+}
+
+/*PC*/
+
+@media only screen and (min-width: 1025px) {
+
+    .hero {
+        height: 80vh;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
+    }
+
+    .hero-banner h6 {
+        font-size: 3rem;
+    }
+
+    .hero-banner h4 {
+
+        font-size: 6rem;
+    }
+
+    .hero-banner h2 {
+
+        font-size: 10rem;
+    }
+
+    .titleLine {
+        visibility: none;
+    }
+
+    .options-container {
+        padding-bottom: 2%;
+    }
+
+
+
+    #NA-products {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 261px;
+        height: 30rem;
+        justify-content: space-between;
+        margin-right: 50px;
+
+
+    }
+
+    .image-Wfashion {
+        padding-top: 3%;
+        height: 425px;
+    }
+
+    .WFashion-title {
+        font-size: 1.5rem;
+        height: 2rem;
+        width: 350px;
+    }
+
+    .image-Mfashion {
+        height: 425px;
+    }
+
+    .MFashion-title {
+        font-size: 1.5rem;
+        width: 350px;
+        height: 2rem;
+
+
+    }
+
+    .image-Sunglass {
+        width: 100%;
+        height: 242px;
+    }
+
+    .Sunglass-title {
+        font-size: 1.5rem;
+        width: 250px;
+        height: 2rem;
+
+
+    }
+
+    .image-Shoes {
+        width: 100%;
+        height: 242px;
+        justify-content: center;
+    }
+
+    .Shoes-title {
+
+        font-size: 1.5rem;
+        height: 2rem;
+        width: 350px;
+    }
+
+    .image-Acc {
+        width: 100%;
+        height: 242px;
+    }
+
+    .Acc-title {
+
+        font-size: 1.5rem;
+        width: 350px;
+        height: 2rem;
+
+
+    }
+
+    /*Featured*/
+
+    .image-Featured {
+
+        width: 80%;
+        height: 500px;
+    }
+
+    .btn-Feature {
+
+        width: 50%;
+        height: 2rem;
+
+    }
 }
