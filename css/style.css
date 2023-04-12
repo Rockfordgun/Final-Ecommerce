@@ -86,7 +86,12 @@ h6 {}
     max-width: 1400px;
 }
 
+.titleLine {
 
+    border-bottom: 1px solid var(--clr-secondary-dark);
+    width: 80vw;
+    margin: auto;
+}
 
 /*Hero Banner*/
 .hero {
@@ -186,11 +191,20 @@ hr {
 .options-container {
     height: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
     transition: var(--transition);
     text-align: center;
     text-transform: uppercase;
     color: var(--clr-secondary-dark);
 
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: var(--clr-secondary-dark);
 }
 
 .show-options {
@@ -405,7 +419,61 @@ hr {
     background: var(--clr-secondary-dark);
 }
 
+/*Brand Slider*/
 
+.main_carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Gallery*/
+
+#gallery {
+    height: 40vh;
+}
+
+/*Daily Deals*/
+
+.mainImage {
+    margin: 0 auto;
+    background: url(../img/shoes/nikeyMain.png) center/contain no-repeat;
+    width: 369px;
+    height: 369px;
+
+}
+
+.sideImage {
+    background: url(../img/shoes/nike2.png) center/contain no-repeat;
+    width: 200px;
+    height: 200px;
+
+}
+
+.backImage {
+    background: url(../img/shoes/nike3.png) center/contain no-repeat;
+    visibility: show;
+
+}
+
+.btmImage {
+    background: url(../img/shoes/nike4.png) center/contain no-repeat;
+    visibility: show;
+
+}
+
+.contentContainer {
+    margin: 0 auto;
+    width: 50vw;
+    text-align: center;
+}
+
+/*Daily Deal END*/
+
+#footer {
+    background-color: var(--clr-grey-1);
+    height: 50vh;
+}
 
 /*Animations*/
 
@@ -483,9 +551,14 @@ hr {
 
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         overflow: visible;
         align-items: center;
+    }
+
+    .filter-btn {
+        margin: 0 8px 0 8px;
+        font-size: 0.9rem;
     }
 
     .option {
@@ -501,7 +574,7 @@ hr {
 
     #NA-products {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin: 5%;
         height: 25rem;
 
@@ -514,6 +587,17 @@ hr {
         flex-wrap: wrap;
         justify-content: center;
 
+
+
+    }
+
+
+    #NA-products {
+
+        width: 261px;
+        height: 30rem;
+
+        margin-right: 50px;
 
 
     }
@@ -575,13 +659,29 @@ hr {
     .image-Featured {
 
         width: 80%;
-        height: 500px;
+        height: 250px;
     }
 
     .btn-Feature {
 
         width: 50%;
         height: 2rem;
+
+    }
+
+    .titleLine {
+
+        width: 95vw;
+
+
+    }
+
+    /*Daily Deal*/
+
+    .sideImage {
+        visibility: show;
+        width: 200px;
+        height: 200px;
 
     }
 
@@ -618,15 +718,19 @@ hr {
         padding-bottom: 2%;
     }
 
+    .newProducts {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
 
 
     #NA-products {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+
         width: 261px;
         height: 30rem;
-        justify-content: space-between;
+
         margin-right: 50px;
 
 
@@ -695,6 +799,11 @@ hr {
 
     }
 
+    .filter-btn {
+
+        font-size: 1rem;
+    }
+
     /*Featured*/
 
     .image-Featured {
@@ -708,5 +817,77 @@ hr {
         width: 50%;
         height: 2rem;
 
+    }
+
+    .titleLine {
+
+        border-bottom: 1px solid var(--clr-secondary-dark);
+        width: 80vw;
+        margin: auto;
+    }
+
+
+    /*Daily Deal*/
+
+
+    .dailyDeal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80vw;
+    }
+
+    .image-Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sub-Container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mainImage {
+        margin: 0 auto;
+
+        margin: 3px 0 3px 0;
+        width: 320px;
+        height: 250px;
+
+    }
+
+    .sideImage {
+
+        width: 100px;
+        height: 100px;
+        margin: 0 3px 0 3px;
+
+    }
+
+    .backImage {
+        width: 100px;
+        height: 100px;
+        margin: 0 3px 0 3px;
+
+
+    }
+
+    .btmImage {
+        width: 100px;
+        height: 100px;
+        margin: 0 3px 0 3px;
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color:
+            margin: 0 auto;
+        width: 50vw;
+        text-align: center;
     }
 }
