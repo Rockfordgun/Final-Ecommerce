@@ -273,18 +273,23 @@ hr {
 
     width: 261px;
     height: 30rem;
-
 }
+
+.imageNewA {
+    width: 261px;
+}
+
 
 .quickAdd {
     display: flex;
+    padding-top: 10px;
     align-items: center;
     background: var(--clr-secondary-dark);
     justify-content: center;
     font-weight: 800;
     color: var(--clr-white);
     width: 261px;
-    height: 2rem;
+    height: 2.2rem;
     visibility: show;
 }
 
@@ -403,7 +408,8 @@ hr {
 
 .image-Featured {
     justify-content: center;
-    background-color: #0473f3;
+    object-fit: cover;
+
     margin: 0 auto;
     width: 80vw;
     height: 40vh;
@@ -430,7 +436,23 @@ hr {
 /*Gallery*/
 
 #gallery {
-    height: 40vh;
+    height: 55vh;
+}
+
+.galleryContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.image-item {
+
+    object-fit: contain;
+
+    border: none;
+    margin-left: 5px;
+    cursor: zoom-in !important;
 }
 
 /*Daily Deals*/
@@ -474,6 +496,48 @@ hr {
     background-color: var(--clr-grey-1);
     height: 50vh;
 }
+
+/*Blog*/
+
+.blogPost1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.blogImage {
+    background-color: #8F6593;
+    width: 261px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.blogContent {
+    margin: 0 auto;
+    width: 261px;
+    text-align: center;
+
+}
+
+.blogDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 200px;
+    color: var(--clr-primary);
+}
+
+.btn_Blog {
+    background: var(--clr-secondary-dark);
+    text-transform: uppercase;
+    color: var(--clr-white);
+    font-weight: 700;
+    width: 261px;
+}
+
+.blog_Title {}
 
 /*Animations*/
 
@@ -685,6 +749,8 @@ hr {
 
     }
 
+
+
 }
 
 /*PC*/
@@ -718,6 +784,8 @@ hr {
         padding-bottom: 2%;
     }
 
+    /*New Arrivals*/
+
     .newProducts {
         display: flex;
         flex-direction: row;
@@ -735,6 +803,10 @@ hr {
 
 
     }
+
+
+
+    /*Banner menu*/
 
     .image-Wfashion {
         padding-top: 3%;
@@ -826,6 +898,44 @@ hr {
         margin: auto;
     }
 
+    /*Gallery*/
+
+    #gallery {
+        height: 53vh;
+    }
+
+    .galleryContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 53vh;
+
+    }
+
+    .galleryImage-container {
+        background: none;
+
+
+    }
+
+    .image-item {
+        background-color: none;
+        min-width: 50px;
+        height: 150px;
+        object-fit: contain;
+        padding-bottom: 10px;
+        border: none;
+        margin-left: 5px;
+        cursor: zoom-in !important;
+    }
+
+    .image-item img {
+        transition: transform 250ms ease;
+    }
+
+    .image-item:is(:hover, :focus) img {
+        transform: scale(1.03);
+    }
 
     /*Daily Deal*/
 
@@ -890,4 +1000,55 @@ hr {
         width: 50vw;
         text-align: center;
     }
+
+    /*Blog Post*/
+
+    .blog-Container {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 10px 0 10px;
+
+    }
+
+    /*Carousel TEst*/
+
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+
+
 }

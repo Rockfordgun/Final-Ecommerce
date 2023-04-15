@@ -2,305 +2,108 @@
 const products = [
   {
     id: 1,
-    name: "nike air",
+    name: "Nike Force Lvl8",
     category: "shoes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/placeholder sample.jpg",
-    price: "R100.00",
+    status: "active",
+    short_description:
+      "The '90s era? Yeah, that was the bomb. Nike AF-1 style? A favourite forever.",
+    img: "../img/shoes/Thumbnails/Nike_force_l1.jpg",
+    price: "R2 299.00",
   },
 
   {
     id: 2,
-    name: "Nike Dunk High",
+    name: "Nike Air Monarch IV",
     category: "shoes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/shoes/Dunk hight.jpg",
-    price: "R2 299,95",
+    short_description:
+      "Built to Last, Crafted to Turn HeadsThe Nike Men's Monarch IV is the sneaker of the '80s ",
+    img: "../img/shoes/Thumbnails/Monarch.jpg",
+    price: "R2 999.00",
   },
 
-  {
-    id: 3,
-    name: "Nike Air Force 1",
-    category: "shoes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/Nike Air Force.jpg",
-    price: "R 2 399,95",
-  },
-
-  {
-    id: 4,
-    name: "Nike Air Force 1 07",
-    category: "shoes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/forcenike.jpg",
-    price: "R 2 199,95",
-  },
-
-  {
-    id: 5,
-    name: "Jordan 1 Mid SE",
-    category: "shoes",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
   //Sunglasses
   {
     id: 6,
-    name: "Ray Ban",
+    name: "Ray-Ban Ferrari",
     category: "sunglasses",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/placeholder sample.jpg",
-    price: "R100.00",
+    short_description:
+      " selection of sunglasses inspired by race car design with Scuderia Ferrari details and a choice of Polarized lenses",
+    img: "../img/sunglasses/thumbnails/ferrari.jpg",
+    price: "R4 120.00",
   },
 
   {
     id: 7,
-    name: "Oakley",
+    name: "Oakley Split Shot",
     category: "sunglasses",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/shoes/Dunk hight.jpg",
-    price: "R2 299,95",
-  },
-
-  {
-    id: 8,
-    name: "Versace",
-    category: "sunglasses",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/Nike Air Force.jpg",
-    price: "R 2 399,95",
-  },
-
-  {
-    id: 9,
-    name: "Prada",
-    category: "sunglasses",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/forcenike.jpg",
-    price: "R 2 199,95",
-  },
-
-  {
-    id: 10,
-    name: "Celine",
-    category: "sunglasses",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
-
-  {
-    id: 11,
-    name: "Gucci",
-    category: "sunglasses",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
+    short_description:
+      "Mens Split Shot with Matte Tortoise frame and Prizm Tungsten Polarized lenses",
+    img: "../img/sunglasses/thumbnails/slingshotT.jpg",
+    price: "R3 450.00",
   },
 
   //Accesories
   {
     id: 12,
-    name: "Leather Belt",
+    name: "Fossil Mens Wallet",
     category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/placeholder sample.jpg",
-    price: "R100.00",
+    short_description:
+      "You can't improve on a classic, but we've refined our Derrick bifold with modern details",
+    img: "../img/accesorries/thumbnail/fossilwallet.jpg",
+    price: "R1 399.00",
   },
 
   {
     id: 13,
-    name: "Handbag",
+    name: "Armani Watch",
     category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/shoes/Dunk hight.jpg",
-    price: "R2 299,95",
+    short_description:
+      "Armani Exchange's 42mm watch features a black sunray dial, multifunction movement and black stainless steel bracelet.",
+    img: "../img/accesorries/thumbnail/armaniwatch.jpg",
+    price: "R4 599.00",
   },
 
-  {
-    id: 14,
-    name: "Nike Air Force 1",
-    category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/Nike Air Force.jpg",
-    price: "R 2 399,95",
-  },
-
-  {
-    id: 15,
-    name: "Neklace",
-    category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/forcenike.jpg",
-    price: "R 2 199,95",
-  },
-
-  {
-    id: 16,
-    name: "Watch",
-    category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
-
-  {
-    id: 17,
-    name: "Socks",
-    category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
-
-  {
-    id: 18,
-    name: "Underwear",
-    category: "accesories",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
   //mens
   {
     id: 19,
-    name: "shorts",
+    name: "Dark Blue Jeans",
     category: "mens",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/placeholder sample.jpg",
-    price: "R100.00",
+    short_description:
+      "Regular-rise jeans cut to a tapered fit in dark-blue supreme-movement denim by BOSS Menswear.",
+    img: "../img/mens/thumbnails/hugojeans.jpg",
+    price: "R2 700.00",
   },
 
   {
     id: 20,
     name: "Shirts",
     category: "mens",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/shoes/Dunk hight.jpg",
-    price: "R2 299,95",
-  },
-
-  {
-    id: 21,
-    name: "jeans",
-    category: "mens",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/Nike Air Force.jpg",
-    price: "R 2 399,95",
-  },
-
-  {
-    id: 22,
-    name: "short phants",
-    category: "mens",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/forcenike.jpg",
-    price: "R 2 199,95",
-  },
-
-  {
-    id: 23,
-    name: "polo shirt",
-    category: "mens",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
+    short_description:
+      "A sporty polo shirt by BOSS Menswear. Featuring a rhinestone BOSS logo",
+    img: "../img/mens/thumbnails/hugoshirt.jpg",
+    price: "R2 100.00",
   },
 
   //woman
 
   {
     id: 24,
-    name: "Dress",
+    name: "Ruby Red Dress",
     category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/placeholder sample.jpg",
-    price: "R100.00",
+    short_description:
+      "Ruby red Sophia slip silk dress from Gilda & Pearl featuring a bias cut finish, a V-neck",
+    img: "../img/womans/thumbnail/womandress.jpg",
+    price: "R8 018.55",
   },
 
   {
     id: 25,
-    name: "lady thshirt",
+    name: "Gucci Turtle Neck",
     category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "../img/shoes/Dunk hight.jpg",
-    price: "R2 299,95",
-  },
-
-  {
-    id: 26,
-    name: "lady jeans",
-    category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/Nike Air Force.jpg",
-    price: "R 2 399,95",
-  },
-
-  {
-    id: 27,
-    name: "lady shorts",
-    category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/forcenike.jpg",
-    price: "R 2 199,95",
-  },
-
-  {
-    id: 28,
-    name: "underwear",
-    category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
-
-  {
-    id: 29,
-    name: "Bra",
-    category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
-  },
-
-  {
-    id: 30,
-    name: "Panties",
-    category: "woman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?",
-    img: "./img/shoes/jordans.jpg",
-    price: "R 1 599,95",
+    short_description:
+      "You can't go wrong with a simple black roll neck jumper now can you? Especially when it's Gucci. ",
+    img: "../img/womans/thumbnail/turtle.jpg",
+    price: "R17 345.98",
   },
 ];
 
@@ -346,11 +149,11 @@ function displayMenuItems(menuItems) {
     <div id="NA-products" >
     
           <div class="imageContainer">
-            <div class="image"><img src="${item.img}" alt="" srcset=""></div>
+            <div class="image"><img src="${item.img}" class="imageNewA" alt="" srcset=""></div>
             <div class="quickAdd"><p>QUICK ADD</p></div>
             <div class="productDetails">
               <h3>${item.name}</h3>
-              <p>${item.description}</p>
+              <p>${item.short_description}</p>
               <h2>${item.price}</h2>
             </div>
           </div>
@@ -361,3 +164,20 @@ function displayMenuItems(menuItems) {
   displayMenu = displayMenu.join("");
   sectionCenter.innerHTML = displayMenu;
 }
+
+/*Carousel Test*/
+let items = document.querySelectorAll(".carousel .carousel-item");
+
+items.forEach((el) => {
+  const minPerSlide = 4;
+  let next = el.nextElementSibling;
+  for (var i = 1; i < minPerSlide; i++) {
+    if (!next) {
+      // wrap carousel by using first child
+      next = items[0];
+    }
+    let cloneChild = next.cloneNode(true);
+    el.appendChild(cloneChild.children[0]);
+    next = next.nextElementSibling;
+  }
+});
