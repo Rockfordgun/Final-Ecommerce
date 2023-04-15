@@ -171,37 +171,93 @@
       
     </section>
     <!-- Company Logos END-->
+<section id="gallery"> 
+
+  <div class="section-title">
+    <div class="title-select py-4">
+      <div class="toggleDD "><button type="button" class="btn_NA">Lookback</button></div>
+      <div class="icon"><i class="fa-solid fa-angle-down"></i></div>
+  </div>
+  </div>
 
     <!-- Gallery START-->
-    <section id="gallery">
-
-      <div class="section-title">
-        <div class="title-select py-4">
-          <div class="toggleDD "><button type="button" class="btn_NA">Lookback Time</button></div>
-          <div class="icon"><i class="fa-solid fa-angle-down"></i></div>
+    
+    <div class="galleryCarousel">
+    <div id="galleryContainer" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-3 ">
+              <a href="./img/gallery/accesories/austin-lowman-lg.jpg" data-bs-toggle="lightbox" >
+              <img src="./img/gallery/accesories/austin-lowman-sm.jpg"alt="" /></a>
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/mens/cool-fashion-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/woman/african-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/shoes/blue-sm.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-3">
+              <img
+                src="./img/gallery/accesories/christian-seymour-sm.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/mens/fashionable-man-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/woman/millenial-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/shoes/multi-sm.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-3">
+              <img src="./img/gallery/sunglasses/ali-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/woman/salein-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/shoes/sea-sm.jpg" alt="" />
+            </div>
+            <div class="col-3">
+              <img src="./img/gallery/mens/flat-lay-of-men-sm.jpg" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-
-      <!--Image Slider Start-->
-
-<div class="galleryContainer ">
-  <div class="galleryImage-container">
-    <button class="image-item" data-modal="true" data-gallery="accesories">
-      <img src="./img/gallery/accesories/austin-lowman-sm.jpg" alt="">
-    </button>
-    <button class="image-item" data-modal="true" data-gallery="mens">
-      <img src="./img/gallery/mens/cool-fashion-sm.jpg" alt="">
-    </button>
-    <button class="image-item" data-modal="true" data-gallery="woman">
-      <img src="./img/gallery/woman/averie-sm.jpg" alt="">
-    </button>
-
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#galleryContainer"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#galleryContainer"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
-</div>
-
-      <!--Image Slider END-->
-
-
 
     </section>
     <!-- Gallery END-->
@@ -419,8 +475,9 @@
 
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-   
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
     
   </body>
 </html>

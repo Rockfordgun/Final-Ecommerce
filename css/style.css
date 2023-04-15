@@ -901,21 +901,20 @@ hr {
     /*Gallery*/
 
     #gallery {
-        height: 53vh;
+        height: 55vh;
+        width: 90vw;
+        margin: 0 auto;
     }
 
     .galleryContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 53vh;
-
+        margin: 0 auto;
+        padding-top: 50px;
     }
 
-    .galleryImage-container {
-        background: none;
 
 
+    .modalBTNcontainer {
+        background-color: #0473f3;
     }
 
     .image-item {
