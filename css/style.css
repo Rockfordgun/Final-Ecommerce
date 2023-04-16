@@ -55,6 +55,8 @@ body {
     margin: 0 auto;
 
 
+
+
 }
 
 h1 {
@@ -93,6 +95,19 @@ h6 {}
     margin: auto;
 }
 
+li {
+    text-decoration: none;
+}
+
+a:link,
+
+a:visited {
+    text-decoration: none;
+    color: var(--clr-secondary-dark);
+}
+
+
+
 /*Hero Banner*/
 .hero {
     min-height: 50vh;
@@ -102,6 +117,7 @@ h6 {}
     align-items: center;
     padding: 0 5% 0 5%;
     color: var(--clr-white);
+    z-index: 1;
 }
 
 .hero-banner {
@@ -131,6 +147,11 @@ hr {
 }
 
 
+button {
+    border: none;
+    background: none;
+}
+
 .btn {
     background-color: var(--clr-secondary-dark);
     font-weight: 800;
@@ -152,6 +173,82 @@ hr {
 }
 
 /*Navigation & Drop Downs*/
+/*Main Nav Start*/
+#mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--clr-secondary-dark);
+    box-shadow: black;
+    z-index: 2;
+}
+
+#nav {}
+
+.social-icons {
+    display: none;
+}
+
+.nav-header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 130px;
+}
+
+
+.nav-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85vw;
+    margin: 0 auto;
+
+}
+
+.nav-toggle {
+    color: var(--clr-white);
+    font-size: 1.5rem;
+}
+
+.links-container {
+    display: flex;
+    padding-right: 8%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--clr-secondary-dark);
+    position: relative;
+}
+
+.links {
+    height: fit-content;
+    position: relative;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    list-style-type: none;
+    text-align: right;
+
+}
+
+.nav_li {}
+
+#shopNav {
+    display: none;
+}
+
+
+
+
+
+/*Main Nav END*/
+
 
 .topNav {
     width: 100%;
@@ -182,6 +279,7 @@ hr {
 #shopNav {
     background: var(--clr-white);
     height: 3rem;
+    z-index: 2;
 }
 
 .option-text {
@@ -436,7 +534,8 @@ hr {
 /*Gallery*/
 
 #gallery {
-    height: 55vh;
+    display: none;
+    height: fit-content;
 }
 
 .galleryContainer {
@@ -456,6 +555,14 @@ hr {
 }
 
 /*Daily Deals*/
+.DailyDeals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    height: 50vh;
+
+}
 
 .mainImage {
     margin: 0 auto;
@@ -488,6 +595,37 @@ hr {
     margin: 0 auto;
     width: 50vw;
     text-align: center;
+}
+
+.deadline-format {
+    padding: 0 3px 0 3px;
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.days,
+.hours,
+.min,
+.sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: var(--clr-secondary-dark);
+    width: 55px;
+    height: 70px;
+    color: var(--clr-white);
+
+}
+
+.deadline-format span {
+    text-transform: uppercase;
 }
 
 /*Daily Deal END*/
@@ -757,6 +895,16 @@ hr {
 
 @media only screen and (min-width: 1025px) {
 
+    a:link,
+    a:visited,
+    a:active {
+        text-decoration: none;
+        color: var(--clr-white);
+    }
+
+
+
+
     .hero {
         height: 80vh;
         background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
@@ -783,6 +931,146 @@ hr {
     .options-container {
         padding-bottom: 2%;
     }
+
+    /*Navigation*/
+
+    .nav-header {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+
+
+    .nav-center {
+        width: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mainNav {
+        display: flex;
+
+
+    }
+
+    .links-container {
+        padding: 1% 10% 0 3%;
+
+
+    }
+
+    .search {
+        margin-bottom: 10px;
+    }
+
+    .links {
+        color: var(--clr-white);
+        width: 30vw;
+        display: flex;
+        color: var(--clr-white);
+        flex-direction: colum;
+
+
+    }
+
+    .nav-toggle {
+        visibility: hidden;
+    }
+
+    .social-icons {
+        padding-top: 1%;
+        padding-right: 10%;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .social-ul {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.5rem;
+        list-style: none;
+    }
+
+    .nav_li:hover {
+        color: var(--clr-primary);
+        border-bottom: 3px solid var(--clr-primary-light);
+    }
+
+    .links-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--clr-secondary-dark);
+        position: relative;
+    }
+
+    .links {
+
+        height: fit-content;
+        color: var(--clr-white);
+        text-transform: uppercase;
+        list-style-type: none;
+        text-align: right;
+        text-align: center;
+
+    }
+
+    #shopNav {
+        display: block;
+    }
+
+    .shopNav-center {
+        align-items: center;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+    .sloganP {
+        margin-top: 3px;
+    }
+
+    .shop-list {
+        display: flex;
+        flex-direction: row;
+
+        list-style: none;
+    }
+
+    .shopli {
+        color: var(--clr-secondary-dark);
+        padding-left: 15%;
+    }
+
+    .shop-icons {
+        display: flex;
+        font-size: 1.5rem;
+        padding-right: 1%;
+        margin-top: 3px;
+
+        flex-direction: column;
+    }
+
+
+
+
+
+
+
 
     /*New Arrivals*/
 
@@ -877,16 +1165,20 @@ hr {
     }
 
     /*Featured*/
+    .feature {
+        background-color: #0473f3;
+    }
 
     .image-Featured {
 
-        width: 80%;
+        width: 100%;
         height: 500px;
+
     }
 
     .btn-Feature {
 
-        width: 50%;
+        width: 100%;
         height: 2rem;
 
     }
@@ -901,6 +1193,7 @@ hr {
     /*Gallery*/
 
     #gallery {
+        display: block;
         height: 55vh;
         width: 90vw;
         margin: 0 auto;
@@ -944,7 +1237,7 @@ hr {
         flex-direction: row;
         justify-content: center;
         margin: 0 auto;
-        width: 80vw;
+        width: 70vw;
     }
 
     .image-Container {
@@ -1012,42 +1305,5 @@ hr {
     }
 
     /*Carousel TEst*/
-
-}
-
-@media (max-width: 767px) {
-    .carousel-inner .carousel-item>div {
-        display: none;
-    }
-
-    .carousel-inner .carousel-item>div:first-child {
-        display: block;
-    }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
-    }
-
-    .carousel-inner .carousel-item-start.active,
-    .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
-    }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start {
-    transform: translateX(0);
-
 
 }
