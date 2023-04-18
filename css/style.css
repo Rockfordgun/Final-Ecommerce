@@ -76,7 +76,11 @@ h4 {
     font-weight: 400;
 }
 
-h5 {}
+h5 {
+    color: var(--clr-secondary-dark);
+    text-transform: uppercase;
+    font-weight: 400;
+}
 
 h6 {}
 
@@ -100,16 +104,26 @@ li {
 }
 
 a:link,
-
-a:visited {
+a:visited,
+a:active {
     text-decoration: none;
-    color: var(--clr-secondary-dark);
+    color: var(--clr-white);
 }
+
+a:hover {
+    font-weight: 600;
+    color: var(--clr-white) !important;
+    border-bottom: 1px solid white;
+
+}
+
+
 
 
 
 /*Hero Banner*/
 .hero {
+
     min-height: 50vh;
     background: var(--clr-grey-1);
     display: flex;
@@ -152,6 +166,7 @@ button {
     background: none;
 }
 
+/*
 .btn {
     background-color: var(--clr-secondary-dark);
     font-weight: 800;
@@ -163,7 +178,7 @@ button {
     transition: var(--transition);
     cursor: pointer;
 }
-
+*/
 .btnHero:hover {
     background: var(--clr-primary);
     border: 1px solid white;
@@ -175,7 +190,7 @@ button {
 /*Navigation & Drop Downs*/
 /*Main Nav Start*/
 #mainNav {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100vw;
@@ -216,6 +231,12 @@ button {
 .nav-toggle {
     color: var(--clr-white);
     font-size: 1.5rem;
+
+}
+
+#nav-toggle:hover {
+    color: #0473f3;
+    animation: rotation 2s infinite linear;
 }
 
 .links-container {
@@ -224,33 +245,46 @@ button {
     flex-direction: column;
     justify-content: center;
     background-color: var(--clr-secondary-dark);
-    position: relative;
+
 }
 
 .links {
-    height: fit-content;
-    position: relative;
+    height: 0;
+    overflow: hidden;
     color: var(--clr-white);
     text-transform: uppercase;
     list-style-type: none;
     text-align: right;
+    transition: var(--transition);
 
 }
 
-.nav_li {}
+.show-links {
+    height: 150px;
+}
+
+li {
+    padding-bottom: 2%;
+}
+
+.nav_li {
+    padding-bottom: 0.5rem;
+    height: fit-content;
+
+}
+
+
+
 
 #shopNav {
     display: none;
 }
 
-
-
-
-
 /*Main Nav END*/
 
 
 .topNav {
+    position: sticky;
     width: 100%;
     background-color: red;
     display: flex;
@@ -271,16 +305,81 @@ button {
 
 }
 
-#mainNav {
-    background: var(--clr-secondary-dark);
-    height: 5rem;
-}
+
 
 #shopNav {
+    position: sticky;
     background: var(--clr-white);
     height: 3rem;
     z-index: 2;
 }
+
+/*Cart*/
+
+
+.cart-contents {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 30rem;
+
+
+}
+
+.cart-dropdown {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--clr-secondary-dark);
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    height: 0;
+    margin-right: 15%;
+    background-color: var(--clr-white);
+    border-radius: 0% 0% 1% 1%;
+    width: 25vw;
+    overflow: hidden;
+    padding: 0 1% 0 1%;
+    overflow-y: auto;
+
+
+}
+
+.cart-btn {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.show-cart {
+    position: fixed;
+    height: 30rem;
+}
+
+.cart-item {
+
+    display: flex;
+    width: 20rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-item-img {
+    width: 10rem;
+    padding-right: 5%;
+}
+
+.cart-product-info {
+    width: 15rem;
+    padding-left: 5%;
+    border-left: 1px solid var(--clr-secondary-dark);
+}
+
+.cart-item-remove-btn {
+
+    color: red;
+}
+
+/*Cart END*/
 
 .option-text {
     text-decoration: none;
@@ -677,6 +776,10 @@ button {
 
 .blog_Title {}
 
+#blog {
+    padding-bottom: 3%;
+}
+
 /*Animations*/
 
 @keyframes letterRun {
@@ -773,6 +876,16 @@ button {
         text-align: center;
     }
 
+    .links {
+        height: fit-content;
+
+        color: var(--clr-white);
+        text-transform: uppercase;
+        list-style-type: none;
+        text-align: right;
+        transition: var(--transition);
+
+    }
 
     #NA-products {
         display: flex;
@@ -895,18 +1008,14 @@ button {
 
 @media only screen and (min-width: 1025px) {
 
-    a:link,
-    a:visited,
-    a:active {
-        text-decoration: none;
-        color: var(--clr-white);
-    }
+
 
 
 
 
     .hero {
-        height: 80vh;
+        height: 100vh;
+        top: 50vh;
         background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
     }
 
@@ -952,17 +1061,17 @@ button {
         align-items: center;
     }
 
+
+
     #mainNav {
+        height: 6rem;
+        top: 3rem;
         display: flex;
 
 
     }
 
-    .links-container {
-        padding: 1% 10% 0 3%;
 
-
-    }
 
     .search {
         margin-bottom: 10px;
@@ -995,6 +1104,7 @@ button {
 
         display: flex;
         flex-direction: row;
+        padding-top: 3%;
         align-items: center;
         justify-content: space-around;
         font-size: 1.5rem;
@@ -1003,10 +1113,11 @@ button {
 
     .nav_li:hover {
         color: var(--clr-primary);
-        border-bottom: 3px solid var(--clr-primary-light);
+
     }
 
     .links-container {
+        padding: 1% 10% 0 3%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -1015,19 +1126,25 @@ button {
         position: relative;
     }
 
-    .links {
 
-        height: fit-content;
-        color: var(--clr-white);
-        text-transform: uppercase;
-        list-style-type: none;
-        text-align: right;
-        text-align: center;
-
+    .links:hover {
+        color: #B8DBD9;
+        transition: var(--transition);
     }
+
+
 
     #shopNav {
         display: block;
+
+
+        top: 9rem;
+        left: 0;
+        width: 100vw;
+        background: var(--clr-white);
+        box-shadow: black;
+        z-index: 2;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
     .shopNav-center {
@@ -1065,7 +1182,10 @@ button {
         flex-direction: column;
     }
 
+    li {
+        padding: 0 4% 0 4%;
 
+    }
 
 
 

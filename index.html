@@ -35,21 +35,21 @@
         </div>
         
         <div class="links-container">
-          <ul class="links" id="links">
-            <li class="nav_li links">
-               home
+          <ul class="links show-links" id="links">
+            <li><a href="http://" target="_blank" rel="noopener noreferrer"></a>
+               <a href="./index.html" target="_blank" rel="noopener noreferrer">home</a>
             </li>
-            <li class="nav_li links">
-              shop
+            <li>
+              <a href="./blog.html" target="_blank" rel="noopener noreferrer">shop</a>
             </li>
-            <li class="nav_li links">
-               blog
+            <li>
+              <a href="./blog.html" target="_blank" rel="noopener noreferrer">blog</a>
             </li>
-            <li class="nav_li links">
-               lookback
+            <li>
+              <a href="./index.html" target="_blank" rel="noopener noreferrer">lookback</a>
             </li>
-            <li class="nav_li links">
-              about us
+            <li>
+              <a href="./blog.html" target="_blank" rel="noopener noreferrer">contact us</a>
             </li>
 
           </ul>
@@ -78,13 +78,58 @@
         <ul class="shop-list">
           <li class="shopli"><i class="fa-solid fa-headset"></i></li>
           <li class="shopli"><i class="fa-solid fa-star"></i></li>
-          <li class="shopli"><i class="fa-solid fa-basket-shopping"></i></li>
+          <button class="sidebar-toggle"> <li class="shopli"><i class="fa-solid fa-basket-shopping"></i></li></button>
+         
 
         </ul>
       </div>
       </div>
     </nav>
     <!--Navigation END-->
+
+    <!--Cart Overlay Start-->
+    <div class="cart-container show-cart">
+
+      <div class="cart-contents">
+
+        <div class="cart-dropdown">
+          <div class="cart-btn"><button class="cart-close"><i class="fa-solid fa-xmark"></i></button></div>
+          <div class="cart-info">
+            <div class="cart-title"><h3>Shopping Cart</h3></div>
+            <div class="cart-items">
+              <article class="cart-item">
+                <!--Item Picture-->
+                <img src="./img/shoes/Nike Air Force.jpg" class="cart-item-img" alt="">
+                <!---Item Info-->
+                <div>
+                  <div class="cart-product-info">
+                <h5 class="cart-item-name">Nike Air Force L1</h5> 
+                <p class="cart-item-price">R50.99</p>
+                <button class="cart-item-remove-btn">remove</button> 
+              </div>  
+              </div>
+                <!--Amount Toggle-->
+                <div></div>
+              </article>
+
+          
+            
+            </div>
+            
+          </div>
+         
+          <footer>
+            <button> cart Checkout</button>
+          </footer>
+
+        </div>
+
+      </div>
+    
+    
+    </div>
+<!--Cart Overlay END-->
+
 
     <!-- Start HEader -->
     <header class="header">
@@ -427,148 +472,127 @@
 
                    <!--Carousel Blog Start-->
 
+                   <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="container carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row" data-id="fashion">
 
-                   <div class="container text-center my-3">
-
-                    <div class="row mx-auto my-auto justify-content-center">
-                        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-                
-                          
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <div class="col-md-3">
-                                        <div class="card border-light">
-                                              <!--Single Blog Post-->
-                  <div class="blogPost1 mx-4 ">
-                    <div class="blogImage"></div>
-                    <div class="blogContent">
-                      <h4 class="blog_Title">Title Here</h4>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
-                      <div class="blogDetails">
-                        <div class="blogDate">Date Here</div>
-                        <div class="author">Piet Pompies</div>
-                      </div>
-                      <button class="btn_Blog">read more</button>
-                    </div>
-                  </div>
-                  <!--Single Blog Post END-->
-                                        </div>
-                                    </div>
+                            <div class="col-3">
+                              <div class="blogImage"></div>
+                              <div class="blogContent">
+                                <h4 class="blog_Title">Title Here1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                                <div class="blogDetails">
+                                  <div class="blogDate">Date Here</div>
+                                  <div class="author">Piet Pompies</div>
                                 </div>
-                              
-                                <div class="carousel-item ">
-                                    <div class="col-md-3">
-                                        <div class="card border-light">
-                  <!--Single Blog Post-->
-                  <div class="blogPost1 mx-4 pb-5">
-                    <div class="blogImage"></div>
-                    <div class="blogContent">
-                      <h4 class="blog_Title">Title Here</h4>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
-                      <div class="blogDetails">
-                        <div class="blogDate">Date Here</div>
-                        <div class="author">Piet Pompies</div>
-                      </div>
-                      <button class="btn_Blog">read more</button>
-                    </div>
-                  </div>
-                  <!--Single Blog Post END-->
-                
-                                        </div>
-                                    </div>
+                                <button class="btn_Blog">read more</button>
                                 </div>
-                                <div class="carousel-item">
-                                    <div class="col-md-3">
-                                      <div class="card border-light"></div>
-                                         <!--Single Blog Post-->
-                  <div class="blogPost1 mx-4 pb-5">
-                    <div class="blogImage"></div>
-                    <div class="blogContent">
-                      <h4 class="blog_Title">Title Here</h4>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
-                      <div class="blogDetails">
-                        <div class="blogDate">Date Here</div>
-                        <div class="author">Piet Pompies</div>
-                      </div>
-                      <button class="btn_Blog">read more</button>
-                    </div>
-                  </div>
-                  <!--Single Blog Post END-->
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-md-3">
-                                        <div class="card border-light">
-                                             <!--Single Blog Post-->
-                  <div class="blogPost1 mx-4 pb-5">
-                    <div class="blogImage"></div>
-                    <div class="blogContent">
-                      <h4 class="blog_Title">Title Here</h4>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
-                      <div class="blogDetails">
-                        <div class="blogDate">Date Here</div>
-                        <div class="author">Piet Pompies</div>
-                      </div>
-                      <button class="btn_Blog">read more</button>
-                    </div>
-                  </div>
-                  <!--Single Blog Post END-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-md-3">
-                                        <div class="card border-light">
-                                              <!--Single Blog Post-->
-                  <div class="blogPost1 mx-4 pb-5">
-                    <div class="blogImage"></div>
-                    <div class="blogContent">
-                      <h4 class="blog_Title">Title Here</h4>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
-                      <div class="blogDetails">
-                        <div class="blogDate">Date Here</div>
-                        <div class="author">Piet Pompies</div>
-                      </div>
-                      <button class="btn_Blog">read more</button>
-                    </div>
-                  </div>
-                  <!--Single Blog Post END-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="col-md-3">
-                                        <div class="card border-light">
-                                              <!--Single Blog Post-->
-                  <div class="blogPost1 mx-4 pb-5">
-                    <div class="blogImage"></div>
-                    <div class="blogContent">
-                      <h4 class="blog_Title">Title Here</h4>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
-                      <div class="blogDetails">
-                        <div class="blogDate">Date Here</div>
-                        <div class="author">Piet Pompies</div>
-                      </div>
-                      <button class="btn_Blog">read more</button>
-                    </div>
-                  </div>
-                  <!--Single Blog Post END-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          
-                            <a class="carousel-control-prev bg-transparent w-aut " href="#recipeCarousel" role="button" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                            </a>
-                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </a>
                         </div>
+                        <div class="col-3">
+                          <div class="blogImage"></div>
+                          <div class="blogContent">
+                            <h4 class="blog_Title">Title Here2</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                            <div class="blogDetails">
+                              <div class="blogDate">Date Here</div>
+                              <div class="author">Piet Pompies</div>
+                            </div>
+                            <button class="btn_Blog">read more</button>
+                            </div>
                     </div>
-                
+                    <div class="col-3">
+                      <div class="blogImage"></div>
+                      <div class="blogContent">
+                        <h4 class="blog_Title">Title Here3</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                        <div class="blogDetails">
+                          <div class="blogDate">Date Here</div>
+                          <div class="author">Piet Pompies</div>
+                        </div>
+                        <button class="btn_Blog">read more</button>
+                        </div>
                 </div>
-                
+                                            <div class="col-3">
+                              <div class="blogImage"></div>
+                              <div class="blogContent">
+                                <h4 class="blog_Title">Title Here4</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                                <div class="blogDetails">
+                                  <div class="blogDate">Date Here</div>
+                                  <div class="author">Piet Pompies</div>
+                                </div>
+                                <button class="btn_Blog">read more</button>
+                                </div>
+                        </div>
+                      </div>
+</div>
+                      <div class="carousel-item">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="blogImage"></div>
+                          <div class="blogContent">
+                            <h4 class="blog_Title">Title Here5</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                            <div class="blogDetails">
+                              <div class="blogDate">Date Here</div>
+                              <div class="author">Piet Pompies</div>
+                            </div>
+                            <button class="btn_Blog">read more</button>
+                            </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="blogImage"></div>
+                      <div class="blogContent">
+                        <h4 class="blog_Title">Title Here6</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                        <div class="blogDetails">
+                          <div class="blogDate">Date Here</div>
+                          <div class="author">Piet Pompies</div>
+                        </div>
+                        <button class="btn_Blog">read more</button>
+                        </div>
+                </div>
+                <div class="col-3">
+                  <div class="blogImage"></div>
+                  <div class="blogContent">
+                    <h4 class="blog_Title">Title Here7</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                    <div class="blogDetails">
+                      <div class="blogDate">Date Here</div>
+                      <div class="author">Piet Pompies</div>
+                    </div>
+                    <button class="btn_Blog">read more</button>
+                    </div>
+            </div>
+                                        <div class="col-3">
+                          <div class="blogImage"></div>
+                          <div class="blogContent">
+                            <h4 class="blog_Title">Title Here8</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos at, excepturi totam ratione minus?</p>
+                            <div class="blogDetails">
+                              <div class="blogDate">Date Here</div>
+                              <div class="author">Piet Pompies</div>
+                            </div>
+                            <button class="btn_Blog">read more</button>
+                            </div>
+                      </div>                      
+                      </div>
+                      <div class="carousel-item">
+                  <div class="row">
+                    
+                  </div>                      
+                  </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                                   <!--Carousel Blog END-->
 
 </section>
