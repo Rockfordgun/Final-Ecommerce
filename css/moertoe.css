@@ -336,7 +336,7 @@ li {
 
 
 .cart-contents {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -457,10 +457,6 @@ li {
     background: none;
     border: none;
     color: var(--clr-secondary-dark);
-}
-
-.filterBTN-container {
-    z-index: 6;
 }
 
 .show-options {

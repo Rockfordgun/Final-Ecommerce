@@ -1,4 +1,3 @@
-/*Drop Down Menu*/
 const products = [
   {
     id: 1,
@@ -164,49 +163,3 @@ function displayMenuItems(menuItems) {
   displayMenu = displayMenu.join("");
   sectionCenter.innerHTML = displayMenu;
 }
-
-/*Daily Deals Timer*/
-
-let timeLeft = 10;
-
-const countDown = () => {
-  timeLeft--;
-
-  if (timeLeft === 0) {
-    console.log("hello there");
-  }
-};
-
-/*Nav Toggle*/
-
-const navToggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".links");
-
-navToggle.addEventListener("click", function () {
-  console.log(links.classList.contains("links"));
-
-  if (links.classList.contains("show-links")) {
-    links.classList.remove("show-links");
-  } else {
-    links.classList.add("show-links");
-  }
-});
-
-/*Cart*/
-
-const sidebarToggle = document.querySelector(".sidebar-toggle");
-const cartContainer = document.querySelector(".cart-container");
-const cart = document.querySelector(".cart-dropdown");
-const closeBTN = document.querySelector(".cart-close");
-
-sidebarToggle.addEventListener("click", function () {
-  if (cart.classList.contains("show-cart")) {
-    cart.classList.remove("show-cart");
-  } else {
-    cart.classList.add("show-cart");
-  }
-});
-
-closeBTN.addEventListener("click", function () {
-  cart.classList.remove("show-cart");
-});
