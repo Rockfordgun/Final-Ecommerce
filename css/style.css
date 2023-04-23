@@ -68,7 +68,10 @@ h2 {
     text-transform: uppercase;
 }
 
-h3 {}
+h3 {
+    color: var(--clr-secondary-dark);
+
+}
 
 h4 {
     color: var(--clr-secondary-dark);
@@ -119,7 +122,9 @@ a:hover {
 }
 
 
-
+p {
+    font-size: 0.9rem;
+}
 
 
 /*Hero Banner*/
@@ -334,17 +339,17 @@ li {
 
 /*Cart*/
 
-
 .cart-contents {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 100vw;
-    height: 30rem;
+    height: 20rem;
 
 
 }
+
 
 .cart-dropdown {
     display: flex;
@@ -565,6 +570,9 @@ li {
 }
 
 /*Product Category*/
+.image-menu {
+    z-index: 2;
+}
 
 .image-Wfashion {
     display: flex;
@@ -874,6 +882,39 @@ li {
 
 /* Media Queries */
 
+/*__________________
+ABOUT US
+____________________*/
+
+.section-policy {
+    background-color: var(--clr-secondary-light);
+}
+
+.policys {
+    text-align: center;
+
+}
+
+.policy-icon {
+    font-size: 5rem;
+}
+
+.team-social {
+    color: var(--clr-secondary-dark);
+}
+
+.about-title {
+    color: var(--clr-secondary-dark);
+    font-weight: 600;
+}
+
+.tes-img {
+    object-fit: cover;
+    width: 200px;
+    height: 250px;
+}
+
+
 
 
 
@@ -1059,7 +1100,23 @@ li {
 
     }
 
+    /*__________________
+ABOUT US
+____________________*/
 
+    .policys {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tes-img {
+
+        width: 500px;
+
+    }
 
 }
 
@@ -1176,7 +1233,8 @@ li {
     }
 
     .links-container {
-        padding: 1% 10% 0 3%;
+
+        padding: 1% 5% 0 3%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -1185,6 +1243,9 @@ li {
         position: relative;
     }
 
+    .links {
+        width: 50rem;
+    }
 
     .links:hover {
         color: #B8DBD9;
@@ -1481,6 +1542,46 @@ li {
 
     }
 
-    /*Carousel TEst*/
+    /*__________________
+ABOUT US
+____________________*/
 
+    .policys {
+        width: 10vw;
+
+    }
+
+    .policy-icon {
+        font-size: 5rem;
+    }
+
+    .hero-about {
+        height: 100vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/aboutus/aboutusbanner.jpg) center/cover no-repeat;
+    }
+
+    .hero-banner-about h6 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+        font-size: 3rem;
+    }
+
+    .hero-banner-about h4 {
+        color: var(--clr-white);
+        font-family: var(--ff-secondary);
+        font-size: 6rem;
+    }
+
+    .hero-banner-about h2 {
+        color: var(--clr-white);
+        font-family: var(--ff-secondary);
+        font-size: 10rem;
+    }
+
+    .tes-img {
+
+        width: 700px;
+
+    }
 }
