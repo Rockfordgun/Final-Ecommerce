@@ -1,4 +1,3 @@
-/*Drop Down Menu*/
 const products = [
   {
     id: 1,
@@ -107,8 +106,51 @@ const products = [
   },
 ];
 
+const blogPost = [
+  {
+    title: "The Ultimate Guide to Layering Clothes for Fall",
+    author: "Emily Johnson",
+    date: "2022-10-15",
+    category: "Fashion",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis convallis augue. Sed mattis ante et nisi venenatis, ac ultricies augue dapibus.",
+  },
+  {
+    title: "5 Ways to Style Your Denim Jacket for Any Occasion",
+    author: "Jessica Lee",
+    date: "2022-09-28",
+    category: "Fashion",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod purus et malesuada molestie. Quisque nec blandit nisi, id ullamcorper nisi.",
+  },
+  {
+    title: "The Hottest Trends from Milan Fashion Week 2022",
+    author: "David Chen",
+    date: "2022-08-25",
+    category: "Fashion",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo dolor vel ipsum bibendum tempus. Aliquam quis risus a augue ullamcorper blandit.",
+  },
+  {
+    title: "The Best Summer Dresses Under $50",
+    author: "Sarah Lee",
+    date: "2022-07-16",
+    category: "Fashion",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus metus a sapien pretium, sit amet maximus enim sagittis. Ut nec ultricies quam.",
+  },
+  {
+    title: "Accessorize Your Outfit: The Dos and Don'ts",
+    author: "Kevin Smith",
+    date: "2022-06-03",
+    category: "Fashion",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat venenatis mi, id congue nisi hendrerit in. Suspendisse vel urna et justo efficitur malesuada.",
+  },
+];
+
 const menuSelect = document.querySelector(".title-select");
-const optionsCon = document.querySelector(".filterBTN-container");
+const optionsCon = document.querySelector(".options-container");
 const optionList = document.querySelector(".options");
 
 menuSelect.addEventListener("click", function () {
@@ -150,7 +192,7 @@ function displayMenuItems(menuItems) {
     
           <div class="imageContainer">
             <div class="image"><img src="${item.img}" class="imageNewA" alt="" srcset=""></div>
-            <div class="quickAdd"><p>QUICK ADD</p></div>
+            <button type="button" class="cart-item-add-btn">ADD TO CART</button> 
             <div class="productDetails">
               <h3>${item.name}</h3>
               <p>${item.short_description}</p>
@@ -197,7 +239,7 @@ navToggle.addEventListener("click", function () {
 const sidebarToggle = document.querySelector(".sidebar-toggle");
 const cartContainer = document.querySelector(".cart-container");
 const cart = document.querySelector(".cart-dropdown");
-const closeBTN = document.querySelector(".cart-close");
+const closeBTN = document.querySelector("cart-btn");
 
 sidebarToggle.addEventListener("click", function () {
   if (cart.classList.contains("show-cart")) {
@@ -207,6 +249,14 @@ sidebarToggle.addEventListener("click", function () {
   }
 });
 
-closeBTN.addEventListener("click", function () {
-  cart.classList.remove("show-cart");
-});
+const addCart = document.querySelectorAll(".cart-item-add-btn");
+
+for (var i = 0; i < addCart.length; i++) {
+  addCart[i].addEventListener("click", function () {
+    myFunction();
+  });
+}
+
+function myFunction() {
+  console.log("Clicked!");
+}

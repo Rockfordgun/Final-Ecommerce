@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!--CSS Script-->
     <link rel="stylesheet" href="./css/style.css" />
+    
 <!--Bootstrap-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
@@ -22,7 +23,8 @@
     <!--Navigation Start-->
     
     <nav id="mainNav">
-      
+ 
+
       <div class="nav-center">
         
         <div class="nav-header">
@@ -144,6 +146,8 @@
 <!--Cart Overlay END-->
 
 
+
+
     <!-- Start HEader -->
     <header class="header">
       <div class="hero">
@@ -164,54 +168,72 @@
       <div class="section-title">
 
 <!--Drop Down Start-->
-        <div class="title-select">
-            <div class="toggleDD"><button type="button" class="btn_NA">new arrivals</button></div>
-            <div class="icon"><i class="fa-solid fa-angle-down"></i></div>
-        </div>
+
+<!--Feature Product Start-->
+<!--New Arrivals START-->
+
+<section class="newArrivals">
+  <div class="section-title">
+
+<!--Drop Down Start-->
+    <div class="title-select">
+        <div class="toggleDD"><button type="button" class="btn_NA">new arrivals</button></div>
+        <div class="icon"><i class="fa-solid fa-angle-down"></i></div>
+    </div>
 <!--Filter Buttons-->
 <div class="filterBTN-container">
-  <button class="filter-btn" type="btn" data-id="all">All</button>
-  <button class="filter-btn" type="btn" data-id="shoes">Shoes</button>
-  <button class="filter-btn" type="btn" data-id="sunglasses">Sunglasses</button>
-  <button class="filter-btn" type="btn" data-id="accesories">Accesories</button>
-  <button class="filter-btn" type="btn" data-id="mens">Mens</button>
-  <button class="filter-btn" type="btn" data-id="woman">Woman</button>
-    
-    </div>
-      
+<button class="filter-btn" type="btn" data-id="all">All</button>
+<button class="filter-btn" type="btn" data-id="shoes">Shoes</button>
+<button class="filter-btn" type="btn" data-id="sunglasses">Sunglasses</button>
+<button class="filter-btn" type="btn" data-id="accesories">Accesories</button>
+<button class="filter-btn" type="btn" data-id="mens">Mens</button>
+<button class="filter-btn" type="btn" data-id="woman">Woman</button>
+
+</div>
+  
 <!--Single Product Start-->
 
 <div class="NewestProducts section-center">
-  <div class="newProducts">
+<div class="newProducts">
 
-  <!--Single Product Start-->
-    <article class="menu-item">
+<!--Single Product Start-->
+<article class="menu-item">
 <div id="NA-products" >
 
-      <div class="imageContainer">
-        <div class="image"><img src="./img/image1.jpg" class="imageNewA"alt="" srcset=""></div>
-        <div class="quickAdd"><p>QUICK ADD</p></div>
-        <div class="productDetails">
-          <h3>Main Product</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?</p>
-          <h2>R100.00</h2>
-        </div>
-      </div>
-      </div>
+  <div class="imageContainer">
+    <div class="image"><img src="./img/image1.jpg" class="imageNewA"alt="" srcset=""></div>
+    <div class="quickAdd"><p>QUICK ADD</p></div>
+    <div class="productDetails">
+      <h3>Main Product</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, dolorum?</p>
+      <h2>R100.00</h2>
+    </div>
+  </div>
+  </div>
 
-    </article>
-    <!--Single Product END-->
-        </section>
- <!--New Arrivals END-->
+</article>
+<!--Single Product END-->
+    </section>
+<!--New Arrivals END-->
 
- <section>
+
+
+
+<!--Feature Product END-->
     <!--Category Big Menu Start-->
 
     <div class="container text-center">
       <div class="row">
+
+        <section class="section featured">
+
+          <div class="featured-title">
+            <h2></h2>
+          </div>
+        </section>
         
         <div class="col py-3 image-menu">
-          <a href="./shop pages/woman.html">
+          <a href="./shop_pages/woman.html">
           <div class="image-Wfashion">
             
             <div class="WFashion-title"><h4>Woman</h4></div>
@@ -220,7 +242,7 @@
         
         </div>
         <div class="col py-3">
-          <a href="./shop pages/men.html">
+          <a href="./shop_pages/men.html">
           <div class="image-Mfashion">
 
             <div class="MFashion-title"><h4>Men</h4></div>
@@ -231,7 +253,7 @@
       <div class="row">
         
         <div class="col pb-3">
-          <a href="./shop pages/sunglasses.html">
+          <a href="./shop_pages/sunglasses.html">
           <div class="image-Sunglass">
              <div class="Sunglass-title"><h4>Sunglasses</h4></div>
          
@@ -240,7 +262,7 @@
         </div>
 
         <div class="col pb-3">
-          <a href="./shop pages/shoes.html">
+          <a href="./shop_pages/shoes.html">
           <div class="image-Shoes">
 
             <div class="Shoes-title"><h4>Shoes</h4></div>
@@ -249,7 +271,7 @@
         </div>
         <div class="col pb-3">
           <div class="image-Acc">
-            <a href="./shop pages/accesories.html">
+            <a href="./shop_pages/accesories.html">
             <div class="Acc-title"><h4>Accesories</h4></div>
             </a>
           </div>
@@ -628,7 +650,9 @@
                                  
 </section>
 
-
+<section>
+  <button type="button" class="button-tester">TEST ME</button>
+</section>
 
 <footer id="footer">
 
@@ -716,21 +740,22 @@
     <!-- Footer END-->
 
     <!--Icons-->
+    
     <script
       src="https://kit.fontawesome.com/c9e1ae9f10.js"
       crossorigin="anonymous"
     ></script>
 
-    <script src="./scripts/script.js"></script>
+    <script type="module" src="../scripts/script.js" async></script>
     <!--
     <script type="module" src="./index.js"></script>
-   -->
 
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    
+   
+   
     
   </body>
 </html>
