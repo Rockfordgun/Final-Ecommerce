@@ -1,2 +1,0 @@
-//global imports
-import "../";

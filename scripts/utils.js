@@ -1,6 +1,7 @@
-require("dotenv").config();
-
-module.exports = {
-  allProductsUrl:
-    "https://ap-southeast-2.aws.data.mongodb-api.com/app/store-aeois/endpoint/Getfashionstore",
+const getElement = (selection) => {
+  const element = document.querySelector(selection);
+  if (element) return element;
+  throw new Error(
+    `Please check "${selection}" selector, no such element exist`
+  );
 };

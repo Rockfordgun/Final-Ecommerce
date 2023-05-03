@@ -5,9 +5,10 @@ const products = [
     category: "shoes",
     status: "active",
     short_description:
-      "The '90s era? Yeah, that was the bomb. Nike AF-1 style? A favourite forever.",
+      "The 90s era? Yeah, that was the bomb. Nike AF-1 style? A favourite forever.",
     img: "./img/shoes/Thumbnails/Nike_force_l1.jpg",
     price: "R2 299.00",
+    inCart: 0,
   },
 
   {
@@ -15,9 +16,10 @@ const products = [
     name: "Nike Air Monarch IV",
     category: "shoes",
     short_description:
-      "Built to Last, Crafted to Turn HeadsThe Nike Men's Monarch IV is the sneaker of the '80s ",
+      "Built to Last, Crafted to Turn HeadsThe Nike Mens Monarch IV is the sneaker of the 80s ",
     img: "./img/shoes/Thumbnails/Monarch.jpg",
     price: "R2 999.00",
+    inCart: 0,
   },
 
   //Sunglasses
@@ -26,9 +28,10 @@ const products = [
     name: "Ray-Ban Ferrari",
     category: "sunglasses",
     short_description:
-      " selection of sunglasses inspired by race car design with Scuderia Ferrari details and a choice of Polarized lenses",
+      "selection of sunglasses inspired by race car design with Scuderia Ferrari details and a choice of Polarized lenses",
     img: "./img/sunglasses/thumbnails/ferrari.jpg",
     price: "R4 120.00",
+    inCart: 0,
   },
 
   {
@@ -47,7 +50,7 @@ const products = [
     name: "Fossil Mens Wallet",
     category: "accesories",
     short_description:
-      "You can't improve on a classic, but we've refined our Derrick bifold with modern details",
+      "You cant improve on a classic but we have refined our Derrick bifold with modern details",
     img: "./img/accesorries/thumbnail/fossilwallet.jpg",
     price: "R1 399.00",
   },
@@ -57,7 +60,7 @@ const products = [
     name: "Armani Watch",
     category: "accesories",
     short_description:
-      "Armani Exchange's 42mm watch features a black sunray dial, multifunction movement and black stainless steel bracelet.",
+      "Armani Exchanges 42mm watch features a black sunray dial multifunction movement and black stainless steel bracelet.",
     img: "./img/accesorries/thumbnail/armaniwatch.jpg",
     price: "R4 599.00",
   },
@@ -100,7 +103,7 @@ const products = [
     name: "Gucci Turtle Neck",
     category: "woman",
     short_description:
-      "You can't go wrong with a simple black roll neck jumper now can you? Especially when it's Gucci. ",
+      "You can not go wrong with a simple black roll neck jumper now can you? Especially when its Gucci. ",
     img: "./img/womans/thumbnail/turtle.jpg",
     price: "R17 345.98",
   },
@@ -156,7 +159,6 @@ const optionList = document.querySelector(".options");
 menuSelect.addEventListener("click", function () {
   optionsCon.classList.toggle("show-options");
 });
-console.log(menuSelect);
 
 /*Product Feature*/
 
@@ -186,27 +188,213 @@ filterBtns.forEach(function (btn) {
 });
 
 function displayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
-    return `<article class="menu-item">
+  // Generate HTML code for each item
+  const displayMenu = menuItems
+    .map(function (item) {
+      // Generate the HTML code for the current item
+      return `<article class="menu-item">
     <div id="NA-products" >
-    
-          <div class="imageContainer">
-            <div class="image"><img src="${item.img}" class="imageNewA" alt="" srcset=""></div>
-            <button type="button" class="cart-item-add-btn">ADD TO CART</button> 
-            <div class="productDetails">
-              <h3>${item.name}</h3>
-              <p>${item.short_description}</p>
-              <h2>${item.price}</h2>
-            </div>
-          </div>
-          </div>
-    
-        </article>`;
-  });
-  displayMenu = displayMenu.join("");
+      <div class="imageContainer">
+        <div class="image"><img src="${
+          item.img
+        }" class="imageNewA" alt="" srcset=""></div>
+        <!-- Add a data-attribute to the button for easier access -->
+        <button type="button" class="cart-item-add-btn" data-item='${JSON.stringify(
+          item
+        )}'>ADD TO CART</button> 
+        <div class="productDetails">
+          <h3>${item.name}</h3>
+          <p>${item.short_description}</p>
+          <h2>${item.price}</h2>
+        </div>
+      </div>
+    </div>
+    </article>`;
+    })
+    .join("");
+
+  // Insert the HTML code into the section center element
   sectionCenter.innerHTML = displayMenu;
+
+  // Add an event listener to the Add to Cart button for each item
+  const addToCartButtons = document.querySelectorAll(".cart-item-add-btn");
+
+  addToCartButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Get the item object from the data attribute of the clicked button
+      const item = JSON.parse(button.dataset.item);
+
+      // Add the item to the cart array in local storage
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Increment the cart item count in local storage
+      const cartItemCount =
+        parseInt(localStorage.getItem("cart-item-count")) || 0;
+      localStorage.setItem("cart-item-count", cartItemCount + 1);
+      document.querySelector(".cart-item-count").innerHTML = cartItemCount;
+
+      const cartContainer = document.querySelector(".cart-items");
+
+      let cartItemAdd = window.localStorage.getItem("cart");
+      console.log(cartItemAdd);
+
+      // Do something with the item, like updating the cart UI
+      console.log(`Added item ${item.id} to the cart`);
+
+      function displayCartItems() {
+        // Get the element where you want to display the cart items
+        const cartItemsContainer = document.querySelector(".cart-items");
+
+        // Loop through each item in the cart array and create a new HTML element for it
+        const cartItemsHtml = cart.map((item) => {
+          return `
+          <article class="cart-item">
+          <!--Item Picture-->
+          <img src="${item.img}" class="cart-item-img" alt="">
+          <!---Item Info-->
+          <div>
+            <div class="cart-product-info">
+          <h5 class="cart-item-name">${item.name}</h5> 
+          <p class="cart-item-price">${item.price}</p>
+          <button class="cart-item-remove-btn">remove</button> 
+        </div>  
+        </div>
+          <!--Amount Toggle-->
+          <div class="cart-minmax">
+            <button class="cart-item-increase-btn">
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+              <p class="cart-item-amount">1</p>
+            <button class="cart-item-decrease-btn">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+          </div>
+        </article>
+          `;
+        });
+
+        // Add the HTML elements to the cart items container
+        cartItemsContainer.innerHTML = cartItemsHtml.join("");
+      }
+
+      cartTotal = 0;
+      cart.forEach(function (item) {
+        cartTotal += parseFloat(item.price) * parseInt(item.inCart);
+      });
+      console.log("Cart Total:", cartTotal);
+
+      // Call the displayCartItems function to display the cart items on page load
+      displayCartItems();
+    });
+  });
 }
 
+// function displayMenuItems(menuItems) {
+//   // Generate HTML code for each item
+//   const displayMenu = menuItems
+//     .map(function (item) {
+//       // Generate the HTML code for the current item
+//       return `<article class="menu-item">
+//     <div id="NA-products" >
+//       <div class="imageContainer">
+//         <div class="image"><img src="${
+//           item.img
+//         }" class="imageNewA" alt="" srcset=""></div>
+//         <!-- Add a data-attribute to the button for easier access -->
+//         <button type="button" class="cart-item-add-btn" data-item='${JSON.stringify(
+//           item
+//         )}'>ADD TO CART</button>
+//         <div class="productDetails">
+//           <h3>${item.name}</h3>
+//           <p>${item.short_description}</p>
+//           <h2>${item.price}</h2>
+//         </div>
+//       </div>
+//     </div>
+//     </article>`;
+//     })
+//     .join("");
+
+//   // Insert the HTML code into the section center element
+//   sectionCenter.innerHTML = displayMenu;
+
+//   // Add an event listener to the Add to Cart button for each item
+//   const addToCartButtons = document.querySelectorAll(".cart-item-add-btn");
+
+//   addToCartButtons.forEach(function (button) {
+//     button.addEventListener("click", function () {
+//       // Get the item object from the data attribute of the clicked button
+
+//       const item = JSON.parse(button.dataset.item);
+
+//       // Add the item to the cart array in local storage
+//       const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//       cart.push(item);
+//       localStorage.setItem("cart", JSON.stringify(cart));
+
+//       console.log(cart.length);
+//       // Do something with the item, like updating the cart UI
+//       console.log(`Added item ${item.id} to the cart`);
+//     });
+//   });
+// }
+
+// function displayMenuItems(menuItems) {
+//   // Generate HTML code for each item
+
+//   const displayMenu = menuItems
+//     .map(function (item) {
+//       // Generate the HTML code for the current item
+//       return `<article class="menu-item">
+//     <div id="NA-products" >
+//       <div class="imageContainer">
+//         <div class="image"><img src="${item.img}" class="imageNewA" alt="" srcset=""></div>
+//         <!-- Add a ref to the button for easier access -->
+//         <button type="button" class="cart-item-add-btn" ref="${item.id}" onclick="addToCart()">ADD TO CART</button>
+//         <div class="productDetails">
+//           <h3>${item.name}</h3>
+//           <p>${item.short_description}</p>
+//           <h2>${item.price}</h2>
+//         </div>
+//       </div>
+//     </div>
+//     </article>`;
+//     })
+//     .join("");
+
+//   // Insert the HTML code into the section center element
+//   sectionCenter.innerHTML = displayMenu;
+
+//   // Add an event listener to the Add to Cart button for each item
+//   const addToCartButtons = document.querySelectorAll(".cart-item-add-btn");
+
+//   addToCartButtons.forEach(function (button) {
+//     button.addEventListener("click", function () {
+//       // Get the ID of the item from the button's ref attribute
+//       const itemId = button.getAttribute("ref");
+//       console.log(button.dataset.item.name);
+//       // const itemDescription = button.dataset.description;
+//       // const itemPrice = button.dataset.price;
+//       // const itemName = button.dataset.name;
+
+//       // console.log(itemId);
+
+//       // console.log("here-->>", localStorage.getItem("cartProducts"));
+//       // addToCart()
+//       // Do something with the itemId, like adding it to the cart
+//       console.log(`Added item ${itemId} to the cart`);
+//     });
+//   });
+// }
+
+const addToCart = () => {
+  console.log("reaches", localStorage.getItem("cartNumbers"));
+  const productStorage = localStorage.setItem("cartNumbers", 1);
+  console.log("added to localstorage");
+};
 /*Daily Deals Timer*/
 
 let timeLeft = 10;
@@ -248,15 +436,3 @@ sidebarToggle.addEventListener("click", function () {
     cart.classList.add("show-cart");
   }
 });
-
-const addCart = document.querySelectorAll(".cart-item-add-btn");
-
-for (var i = 0; i < addCart.length; i++) {
-  addCart[i].addEventListener("click", function () {
-    myFunction();
-  });
-}
-
-function myFunction() {
-  console.log("Clicked!");
-}

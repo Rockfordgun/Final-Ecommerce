@@ -131,6 +131,24 @@ p {
     font-size: 0.9rem;
 }
 
+.cart-item-count {
+    position: absolute;
+    background-color: var(--clr-secondary-dark);
+    border-radius: 50%;
+    width: 1.50rem;
+    height: 1.50rem;
+    place-items: center;
+    top: 0.4rem;
+    right: 14rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--clr-white);
+    border: 1px solid white;
+    font-weight: 600;
+
+
+
+}
 
 /*Hero Banner*/
 .hero {
@@ -1219,14 +1237,11 @@ ____________________*/
 
 
     #mainNav {
+        z-index: 3;
         height: 6rem;
         top: 3rem;
         display: flex;
-
-
     }
-
-
 
     .search {
         margin-bottom: 10px;
@@ -1300,7 +1315,7 @@ ____________________*/
         width: 100vw;
         background: var(--clr-white);
         box-shadow: black;
-        z-index: 2;
+        z-index: 10;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
