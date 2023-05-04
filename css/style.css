@@ -131,30 +131,14 @@ p {
     font-size: 0.9rem;
 }
 
-.cart-item-count {
-    position: absolute;
-    background-color: var(--clr-secondary-dark);
-    border-radius: 50%;
-    width: 1.50rem;
-    height: 1.50rem;
-    place-items: center;
-    top: 0.4rem;
-    right: 14rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--clr-white);
-    border: 1px solid white;
-    font-weight: 600;
 
-
-
-}
 
 /*Hero Banner*/
 .hero {
 
     min-height: 50vh;
-    background: var(--clr-grey-1);
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
+    ;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -162,6 +146,8 @@ p {
     color: var(--clr-white);
     z-index: 1;
 }
+
+
 
 .hero-banner {
     transition: var(--transition);
@@ -174,6 +160,7 @@ hr {
 
 .hero-banner h6 {
     font-family: var(--ff-secondary);
+    color: var(--clr-white);
     font-size: 1.5rem;
 }
 
@@ -214,6 +201,11 @@ button {
     border: 1px solid white;
     font-weight: 300;
     padding: .5rem 2rem .5rem 2rem;
+
+}
+
+.shopli {
+    color: var(--clr-secondary-dark);
 
 }
 
@@ -278,7 +270,7 @@ button {
 }
 
 .links {
-    height: 0;
+    height: auto;
     overflow: hidden;
     color: var(--clr-white);
     text-transform: uppercase;
@@ -289,7 +281,7 @@ button {
 }
 
 .show-links {
-    height: 150px;
+    height: 0px;
 }
 
 li {
@@ -331,6 +323,57 @@ li {
     background: var(--clr-white);
     height: 3rem;
     z-index: 2;
+}
+
+.search {
+    display: none;
+}
+
+.sloganP {
+    display: none;
+}
+
+.shop-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.8rem;
+
+}
+
+.shop-icons {
+    padding-right: 10%;
+}
+
+.shopli {
+    list-style: none;
+    margin: 0 5% 0 3%;
+
+}
+
+
+.cart-item-count {
+    position: absolute;
+    background-color: var(--clr-secondary-dark);
+    border-radius: 50%;
+    width: 1.50rem;
+    height: 1.50rem;
+    place-items: center;
+    top: 0.4rem;
+    right: 7rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--clr-white);
+    border: 1px solid white;
+    font-weight: 600;
+
+
+
+}
+
+.hero .btnHero {
+    background: var(--clr-white);
+    color: var(--clr-secondary-dark);
 }
 
 /*Cart*/
@@ -470,7 +513,6 @@ li {
 }
 
 
-
 .section-title {
     display: flex;
     flex-direction: column;
@@ -507,6 +549,9 @@ li {
 }
 
 /*Product*/
+
+
+
 .category {
     position: relative;
 }
@@ -523,7 +568,7 @@ li {
 
     width: 261px;
     height: 30rem;
-    margin-left: 20px;
+
 }
 
 .imageContainer {
@@ -536,18 +581,14 @@ li {
     width: 261px;
 }
 
-
-.quickAdd {
-    display: flex;
-    padding-top: 10px;
-    align-items: center;
-    background: var(--clr-secondary-dark);
-    justify-content: center;
-    font-weight: 800;
-    color: var(--clr-white);
+.cart-item-add-btn {
+    background-color: var(--clr-secondary-dark);
+    z-index: 2;
     width: 261px;
-    height: 2.2rem;
-    visibility: show;
+    height: 2.5rem;
+    text-transform: uppercase;
+    color: var(--clr-white);
+
 }
 
 .productDetails {
@@ -586,6 +627,12 @@ li {
 
     color: var(--clr-secondary-dark);
 
+}
+
+.feature-contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .image-Mfashion {
@@ -808,12 +855,26 @@ li {
     width: 261px;
     height: 320px;
     margin: 0 auto;
+    object-fit: cover;
 }
+
+.blog-1,
+.blog-2,
+.blog-3,
+.blog-4 {
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: ;
+}
+
+.blog-home {}
 
 .blogContent {
     margin: 0 auto;
     width: 261px;
     text-align: center;
+    padding-bottom: 10%;
 
 }
 
@@ -839,6 +900,8 @@ li {
 #blog {
     padding-bottom: 3%;
 }
+
+
 
 /*Animations*/
 
@@ -973,6 +1036,25 @@ ____________________*/
         visibility: hidden;
     }
 
+    .shopNav-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .sloganP {
+        font-size: 1rem;
+        font-weight: 400;
+        display: block;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+
+    .cart-item-count {
+        right: 3.5rem;
+    }
+
 
 
     .toggleDD:before,
@@ -992,12 +1074,13 @@ ____________________*/
 
     .options-container {
 
-
         display: flex;
         flex-direction: row;
         overflow: visible;
         align-items: center;
     }
+
+
 
     .filter-btn {
         margin: 0 8px 0 8px;
@@ -1025,23 +1108,11 @@ ____________________*/
 
     }
 
-    #NA-products {
-        display: flex;
-        flex-direction: row;
-        margin: 5%;
-        height: 25rem;
 
-    }
+    .newArrivals-section {
 
-    .newProducts {
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-
-
+        margin: 0 auto;
+        padding-left: 3rem;
     }
 
 
@@ -1064,14 +1135,14 @@ ____________________*/
 
     .WFashion-title {
         font-size: 1rem;
-        height: 1.2rem;
+        height: 2rem;
     }
 
 
 
     .MFashion-title {
         font-size: 1rem;
-        height: 1.2rem;
+        height: 2rem;
 
     }
 
@@ -1083,7 +1154,7 @@ ____________________*/
 
     .Sunglass-title {
         font-size: 1rem;
-        height: 1.2rem;
+        height: 2rem;
 
     }
 
@@ -1094,7 +1165,7 @@ ____________________*/
 
     .Shoes-title {
         font-size: 1rem;
-        height: 1.2rem;
+        height: 2rem;
 
     }
 
@@ -1105,7 +1176,7 @@ ____________________*/
 
     .Acc-title {
         font-size: 1rem;
-        height: 1.2rem;
+        height: 2rem;
 
     }
 
@@ -1136,6 +1207,41 @@ ____________________*/
         width: 200px;
         height: 200px;
 
+    }
+
+    .nav-toggle {
+        color: var(--clr-white);
+        font-size: 1.5rem;
+
+    }
+
+    #nav-toggle:hover {
+        color: #0473f3;
+        animation: rotation 2s infinite linear;
+    }
+
+    .links-container {
+        display: flex;
+        padding-right: 8%;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--clr-secondary-dark);
+
+    }
+
+    .links {
+        height: auto;
+        overflow: hidden;
+        color: var(--clr-white);
+        text-transform: uppercase;
+        list-style-type: none;
+        text-align: right;
+        transition: var(--transition);
+
+    }
+
+    .show-links {
+        height: 0px;
     }
 
     /*__________________
@@ -1385,6 +1491,10 @@ ____________________*/
     }
 
 
+    .menu-big {
+
+        width: 80vw;
+    }
 
     /*Banner menu*/
 
@@ -1587,13 +1697,30 @@ ____________________*/
 
     /*Blog Post*/
 
-    .blog-Container {
 
+    #blog {
+        padding-bottom: 5%;
+    }
+
+    .newArrivals-section {
+
+        margin: 0 auto;
+        padding-left: 3rem;
+    }
+
+
+
+
+    .links-container {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 0 10px 0 10px;
 
+        flex-direction: row;
+
+
+    }
+
+    .show-links {
+        height: fit-content
     }
 
     /*__________________
@@ -1794,5 +1921,14 @@ ____________________*/
         text-transform: uppercase;
         color: var(--clr-white);
 
+    }
+
+    .sloganP {
+
+        margin-left: 10px;
+    }
+
+    .cart-item-count {
+        right: 28rem;
     }
 }

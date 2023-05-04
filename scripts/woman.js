@@ -3,6 +3,7 @@
 const sidebarToggle = document.querySelector(".sidebar-toggle");
 const cartContainer = document.querySelector(".cart-container");
 const cart = document.querySelector(".cart-dropdown");
+const closeBTN = document.querySelector("cart-btn");
 
 sidebarToggle.addEventListener("click", function () {
   if (cart.classList.contains("show-cart")) {
@@ -15,32 +16,25 @@ sidebarToggle.addEventListener("click", function () {
 const productsE1 = document.querySelector(".products-container");
 const cartItemsE1 = document.querySelector(".cart-items");
 const subTotalE1 = document.querySelector(".cart-total");
-const cartAmountE1 = document.querySelector(".cart-item-count");
-const closeBTN = document.querySelector(".cart-close");
-const navToggle = document.querySelector(".nav-toggle");
 
 function renderProducts() {
   products.forEach((product) => {
-    if (product.featured === "yes") {
+    if (product.category === "woman") {
       productsE1.innerHTML += `
-     <div class="col-sm-12 col-md-6 col-lg-3 gap-3 feature-contain text-center ">
- <article class="menu-item">
-  <div id="NA-products" >
-    <div class="imageContainer">
-      <div class="image"><img src="${product.img}" class="imageNewA" alt="" srcset=""></div>
-      <!-- Add a data-attribute to the button for easier access -->
-      <button type="button" class="cart-item-add-btn" onclick="MaddToCart(${product.id})">ADD TO CART</button> 
-      <div class="productDetails">
-        <h3>${product.name}</h3>
-        <p>${product.short_description}</p>
-        <h2>R${product.price}</h2>
+      <article class="menu-item">
+      <div id="NA-products" >
+        <div class="imageContainer">
+          <div class="image"><img src="${product.img}" class="imageNewA" alt="" srcset=""></div>
+          <!-- Add a data-attribute to the button for easier access -->
+          <button type="button" class="cart-item-add-btn" onclick="MaddToCart(${product.id})">ADD TO CART</button> 
+          <div class="productDetails">
+            <h3>${product.name}</h3>
+            <p>${product.short_description}</p>
+            <h2>R${product.price}</h2>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  </article>
-</div>
-</div>
-
+      </article>
       `;
     }
   });
@@ -155,14 +149,3 @@ function renderCartAmount() {
   });
   cartAmountE1.innerHTML = ` ${totalItems}`;
 }
-
-closeBTN.addEventListener("click", function () {
-  if (cart.classList.contains("show-cart")) {
-    cart.classList.remove("show-cart");
-  }
-});
-
-navToggle.addEventListener("click", function () {
-  links.classList.toggle("show-links");
-});
-//menu hambuger
