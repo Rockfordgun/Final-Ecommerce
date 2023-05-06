@@ -131,13 +131,20 @@ p {
     font-size: 0.9rem;
 }
 
-
+#btn-back-to-top {
+    color: var(--clr-white);
+    background: var(--clr-secondary-dark);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
 
 /*Hero Banner*/
 .hero {
 
     min-height: 50vh;
-    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/sunglassBanner.jpg) center/cover no-repeat;
     ;
     display: flex;
     justify-content: flex-start;
@@ -147,9 +154,150 @@ p {
     z-index: 1;
 }
 
+.hero-shop {
 
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/shopbanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
 
-.hero-banner {
+.hero-blog {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/blogBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-gallery {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/lookbackbanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-about {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/aboutusbanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-contact {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/contactbanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-sunglasses {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/sunglassesBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-accesories {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/acBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-shoes {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/shoesBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-woman {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/womanBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-men {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/manBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5% 0 5%;
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-advert {
+
+    min-height: 50vh;
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/shoeSpecialBanner.jpg) center/cover no-repeat;
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--clr-white);
+    z-index: 1;
+}
+
+.hero-sunglasses {
     transition: var(--transition);
 }
 
@@ -158,29 +306,87 @@ hr {
     color: var(--clr-white);
 }
 
-.hero-banner h6 {
+.hero-banner h6,
+.hero-banner-sunglasses h6,
+.hero-banner-shoes h6,
+.hero-banner-accesories h6,
+.hero-banner-contact h6,
+.hero-banner-gallery h6,
+.hero-banner-blog h6,
+.hero-banner-shop h6,
+.hero-banner-woman h6,
+.hero-banner-men h6,
+.hero-banner-about h6 {
+    font-family: var(--ff-secondary);
+    color: var(--clr-white);
+    font-size: 1rem;
+}
+
+.hero-banner h4,
+.hero-banner-sunglasses h4,
+.hero-banner-shoes h4,
+.hero-banner-accesories h4,
+.hero-banner-contact h4,
+.hero-banner-gallery h4,
+.hero-banner-blog h4,
+.hero-banner-shop h4,
+.hero-banner-woman h4,
+.hero-banner-men h4,
+.hero-banner-about h4 {
     font-family: var(--ff-secondary);
     color: var(--clr-white);
     font-size: 1.5rem;
 }
 
-.hero-banner h4 {
+.hero-banner h2,
+.hero-banner-sunglasses h2,
+.hero-banner-shoes h2,
+.hero-banner-accesories h2,
+.hero-banner-contact h2,
+.hero-banner-gallery h2,
+.hero-banner-blog h2,
+.hero-banner-shop h2,
+.hero-banner-woman h2,
+.hero-banner-men h2,
+.hero-banner-about h2 {
+    font-family: var(--ff-secondary);
+    color: var(--clr-white);
+    font-size: 2.8rem;
+}
+
+#navContainer {
+    position: fixed;
+    width: 100vw;
+
+}
+
+
+
+.addtext {
+    height: 1200px;
+}
+
+.hero-banner-advert h6 {
     font-family: var(--ff-secondary);
     color: var(--clr-white);
     font-size: 2rem;
 }
 
-.hero-banner h2 {
+.hero-banner-advert h4 {
     font-family: var(--ff-secondary);
     color: var(--clr-white);
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
 
+.hero-banner-advert h2 {
+    font-family: var(--ff-secondary);
+    color: var(--clr-white);
+    font-size: 1rem;
+}
 
 button {
-    border: none;
     background: none;
-
+    border: none;
 }
 
 
@@ -300,10 +506,12 @@ li {
     width: 100%;
     background-color: red;
     display: flex;
+
     align-items: center;
+
     margin: 0 auto;
-    height: 3rem;
-    animation: ;
+    height: 3.5rem;
+
     justify-content: space-between;
 }
 
@@ -352,6 +560,7 @@ li {
 }
 
 
+
 .cart-item-count {
     position: absolute;
     background-color: var(--clr-secondary-dark);
@@ -359,7 +568,7 @@ li {
     width: 1.50rem;
     height: 1.50rem;
     place-items: center;
-    top: 0.4rem;
+    top: 0;
     right: 7rem;
     text-align: center;
     font-size: 0.9rem;
@@ -379,6 +588,7 @@ li {
 /*Cart*/
 
 .cart-contents {
+
     position: relative;
     display: flex;
     flex-direction: row;
@@ -396,7 +606,7 @@ li {
 
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     height: 0;
-    margin-right: 15%;
+
     background-color: var(--clr-white);
     border-radius: 0% 0% 1% 1%;
     width: 25vw;
@@ -413,8 +623,11 @@ li {
 }
 
 .show-cart {
+
     position: fixed;
+    top: 11rem;
     height: 20rem;
+    width: 100vw;
 }
 
 .cart-close {
@@ -446,7 +659,8 @@ li {
 }
 
 .cart-checkout {
-    width: 10rem;
+    width: 14rem;
+    height: 3rem;
     font-weight: 600;
     color: var(--clr-white);
     background: var(--clr-secondary-dark);
@@ -742,36 +956,9 @@ li {
 
 /*Gallery*/
 
-#gallery {
-    display: none;
-    height: fit-content;
-}
-
-.galleryContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-.image-item {
-
-    object-fit: contain;
-
-    border: none;
-    margin-left: 5px;
-    cursor: zoom-in !important;
-}
 
 /*Daily Deals*/
-.DailyDeals {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80vw;
-    height: 50vh;
 
-}
 
 .mainImage {
     margin: 0 auto;
@@ -837,6 +1024,15 @@ li {
     text-transform: uppercase;
 }
 
+/*Shop*/
+
+.allProducts-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /*Daily Deal END*/
 
 
@@ -865,10 +1061,18 @@ li {
 
     display: flex;
     flex-direction: column;
-    padding-bottom: ;
+
 }
 
-.blog-home {}
+.blog-btn {
+    background: var(--clr-secondary-dark);
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 70vw;
+    height: 2rem;
+
+}
 
 .blogContent {
     margin: 0 auto;
@@ -895,13 +1099,35 @@ li {
     width: 261px;
 }
 
-.blog_Title {}
+.blog-img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+}
 
 #blog {
     padding-bottom: 3%;
 }
 
+/*gallery*/
 
+#gallery {
+    display: none;
+}
+
+.gallery-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 /*Animations*/
 
@@ -1028,9 +1254,7 @@ ____________________*/
 
     }
 
-    .titleLine {
-        width: 50px;
-    }
+
 
     .icon {
         visibility: hidden;
@@ -1044,15 +1268,16 @@ ____________________*/
     }
 
     .sloganP {
-        font-size: 1rem;
-        font-weight: 400;
+        color: var(--clr-secondary-dark);
+        font-size: 0.9rem;
+        font-weight: 600;
         display: block;
         margin-top: 10px;
         margin-left: 50px;
     }
 
     .cart-item-count {
-        right: 3.5rem;
+        right: 4rem;
     }
 
 
@@ -1200,6 +1425,15 @@ ____________________*/
 
     }
 
+    /*Blog*/
+
+    .blog-btn {
+
+        width: 40vw;
+
+
+    }
+
     /*Daily Deal*/
 
     .sideImage {
@@ -1244,6 +1478,24 @@ ____________________*/
         height: 0px;
     }
 
+    .hero-banner-advert h6 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+
+    }
+
+    .hero-banner-advert h4 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+
+    }
+
+    .hero-banner-advert h2 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+
+    }
+
     /*__________________
 ABOUT US
 ____________________*/
@@ -1273,6 +1525,78 @@ ____________________*/
     }
 
 
+    /*blog*/
+    .blog-img {
+        width: 350px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /*Gallery*/
+    .gallery-section {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .gallery-container {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". LongUp LongUp sqaure1 sqaure1 ."
+            ". LongUp LongUp sqaure1 sqaure1 ."
+            ". LongUp LongUp sqaure2 sqaure2 ."
+            ". LongUp LongUp sqaure2 sqaure2 ."
+            ". longSide1 longSide1 longSide1 longSide1 ."
+            ". longSide1 longSide1 longSide1 longSide1 ."
+            ". sqaure3 sqaure3 sqaure4 sqaure4 ."
+            ". sqaure3 sqaure3 sqaure4 sqaure4 ."
+            ". longSide2 longSide2 longSide2 longSide2 ."
+            ". longSide2 longSide2 longSide2 longSide2 ."
+            ". sqaure5 sqaure5 sqaure6 sqaure6 ."
+            ". sqaure5 sqaure5 sqaure6 sqaure6 .";
+    }
+
+    .LongUp {
+        grid-area: LongUp;
+    }
+
+    .sqaure1 {
+        grid-area: sqaure1;
+    }
+
+    .sqaure2 {
+        grid-area: sqaure2;
+    }
+
+    .longSide1 {
+        grid-area: longSide1;
+    }
+
+    .sqaure3 {
+        grid-area: sqaure3;
+    }
+
+    .sqaure4 {
+        grid-area: sqaure4;
+    }
+
+    .longside2 {
+        grid-area: longSide2;
+    }
+
+    .sqaure5 {
+        grid-area: sqaure5;
+    }
+
+    .sqaure6 {
+        grid-area: sqaure6;
+    }
+
+
     /*__________________
 FOOTER
 ____________________*/
@@ -1287,28 +1611,85 @@ ____________________*/
 
 @media only screen and (min-width: 1025px) {
 
+    #navTest {
+        position: fixed;
+    }
 
+    /*navigation test*/
+    .navmain {
+        padding-top: 0;
+        align-items: center;
+        justify-content: space-between;
 
+    }
 
+    .logoNav {
+        padding-left: 5%;
+    }
 
+    .links-container-c {
+        display: block;
+        padding-top: 1%;
+        padding-left: 5%;
+    }
 
+    .toggle2 {
+        display: none;
+    }
+
+    /*navigation test*/
     .hero {
         height: 100vh;
         top: 50vh;
-        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/portrait-fashionable-woman-wearing-sunglasses-2022-03-30-20-23-46-utc.jpg) center/cover no-repeat;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/sunglassBanner.jpg) center/cover no-repeat;
     }
 
-    .hero-banner h6 {
+    .hero-banner h6,
+    .hero-banner-sunglasses h6,
+    .hero-banner-shoes h6,
+    .hero-banner-accesories h6,
+    .hero-banner-contact h6,
+    .hero-banner-gallery h6,
+    .hero-banner-blog h6,
+    .hero-banner-shop h6,
+    .hero-banner-woman h6,
+    .hero-banner-men h6,
+    .hero-banner- h6 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
         font-size: 3rem;
     }
 
-    .hero-banner h4 {
-
+    .hero-banner h4,
+    .hero-banner-sunglasses h4,
+    .hero-banner-shoes h4,
+    .hero-banner-accesories h4,
+    .hero-banner-contact h4,
+    .hero-banner-gallery h4,
+    .hero-banner-blog h4,
+    .hero-banner-shop h4,
+    .hero-banner-woman h4,
+    .hero-banner-men h4,
+    .hero-banner-about h4 {
+        color: var(--clr-white);
+        font-family: var(--ff-secondary);
         font-size: 6rem;
     }
 
-    .hero-banner h2 {
-
+    .hero-banner h2,
+    .hero-banner-sunglasses h2,
+    .hero-banner-shoes h2,
+    .hero-banner-accesories h2,
+    .hero-banner-contact h2,
+    .hero-banner-gallery h2,
+    .hero-banner-blog h2,
+    .hero-banner-shop h2,
+    .hero-banner-woman h2,
+    .hero-banner-men h2,
+    .hero-banner-about h2 {
+        color: var(--clr-white);
+        font-family: var(--ff-secondary);
         font-size: 10rem;
     }
 
@@ -1360,6 +1741,11 @@ ____________________*/
         color: var(--clr-white);
         flex-direction: colum;
 
+
+    }
+
+    .topNav {
+        position: fixed;
 
     }
 
@@ -1465,7 +1851,16 @@ ____________________*/
 
     }
 
+    .cart-dropdown {
+        right: 23rem;
+    }
 
+    .show-cart {
+        top: 12rem;
+        position: fixed;
+        height: 25rem;
+        width: 30rem;
+    }
 
 
 
@@ -1633,50 +2028,26 @@ ____________________*/
 
     /*Daily Deal*/
 
-
-    .dailyDeal {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 0 auto;
-        width: 70vw;
+    #DailyDeals {
+        padding-top: 70px;
     }
 
-    .image-Container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .hero-banner-advert h6 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+        font-size: 5rem;
     }
 
-    .sub-Container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    .hero-banner-advert h4 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+        font-size: 3rem;
     }
 
-    .mainImage {
-        margin: 0 auto;
-
-        margin: 3px 0 3px 0;
-        width: 320px;
-        height: 250px;
-
-    }
-
-    .sideImage {
-
-        width: 100px;
-        height: 100px;
-        margin: 0 3px 0 3px;
-
-    }
-
-    .backImage {
-        width: 100px;
-        height: 100px;
-        margin: 0 3px 0 3px;
-
-
+    .hero-banner-advert h2 {
+        font-family: var(--ff-secondary);
+        color: var(--clr-white);
+        font-size: ;
     }
 
     .btmImage {
@@ -1689,14 +2060,32 @@ ____________________*/
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color:
-            margin: 0 auto;
+        margin: 0 auto;
         width: 50vw;
         text-align: center;
     }
 
-    /*Blog Post*/
+    /*__________________
+SHOP
+____________________*/
 
+    .hero-shop {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/shopbanner.jpg) center/cover no-repeat;
+    }
+
+
+
+    /*__________________
+BLOG
+____________________*/
+    .hero-blog {
+        height: 100vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/blogBanner.jpg) center/cover no-repeat;
+    }
 
     #blog {
         padding-bottom: 5%;
@@ -1707,7 +2096,6 @@ ____________________*/
         margin: 0 auto;
         padding-left: 3rem;
     }
-
 
 
 
@@ -1722,6 +2110,27 @@ ____________________*/
     .show-links {
         height: fit-content
     }
+
+    .blog-btn {
+
+        width: 20vw;
+        height: 3rem;
+
+    }
+
+
+
+    /*__________________
+LOOKBACK
+____________________*/
+    .hero-gallery {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/lookbackbanner.jpg) center/cover no-repeat;
+    }
+
+
 
     /*__________________
 ABOUT US
@@ -1739,26 +2148,9 @@ ____________________*/
     .hero-about {
         height: 100vh;
         padding: 200px 150px;
-        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/aboutus/aboutusbanner.jpg) center/cover no-repeat;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/aboutusbanner.jpg) center/cover no-repeat;
     }
 
-    .hero-banner-about h6 {
-        font-family: var(--ff-secondary);
-        color: var(--clr-white);
-        font-size: 3rem;
-    }
-
-    .hero-banner-about h4 {
-        color: var(--clr-white);
-        font-family: var(--ff-secondary);
-        font-size: 6rem;
-    }
-
-    .hero-banner-about h2 {
-        color: var(--clr-white);
-        font-family: var(--ff-secondary);
-        font-size: 10rem;
-    }
 
     .tes-img {
 
@@ -1773,47 +2165,8 @@ ____________________*/
     .hero-contact {
         height: 100vh;
         padding: 200px 150px;
-        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/contactus/contactbanner.jpg) center/cover no-repeat;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/contactbanner.jpg) center/cover no-repeat;
     }
-
-    .hero-banner-contact h6,
-    .hero-banner-blog h6,
-    .hero-banner-shop h6 {
-        font-family: var(--ff-secondary);
-        color: var(--clr-white);
-        font-size: 3rem;
-    }
-
-    .hero-banner-contact h4,
-    .hero-banner-blog h4,
-    .hero-banner-shop h4 {
-        color: var(--clr-white);
-        font-family: var(--ff-secondary);
-        font-size: 6rem;
-    }
-
-    .hero-banner-contact h2,
-    .hero-banner-blog h2,
-    .hero-banner-shop h2 {
-        color: var(--clr-white);
-        font-family: var(--ff-secondary);
-        font-size: 10rem;
-    }
-
-    .hero-blog {
-        height: 100vh;
-        padding: 200px 150px;
-        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/blog/blogmainbanner.jpg) center/cover no-repeat;
-    }
-
-    .hero-shop {
-        height: 100vh;
-        padding: 200px 150px;
-        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/shop/shopbanner.jpg) center/cover no-repeat;
-    }
-
-
-
 
     /*Footer Bottom*/
 
@@ -1830,7 +2183,19 @@ ____________________*/
         display: block;
     }
 
+    /*navigation test*/
+    .navshop {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 21% 0 10%;
 
+    }
+
+    .sloganP {
+        padding-top: 0;
+    }
+
+    /*navigation test */
 
     .f-bottom {
         display: block;
@@ -1887,7 +2252,7 @@ ____________________*/
     }
 
     .blog-img {
-        width: 350px;
+        width: 600px;
         height: 450px;
         object-fit: cover;
     }
@@ -1904,14 +2269,7 @@ ____________________*/
         font-size: 13px;
     }
 
-    .blog-btn {
-        background-color: var(--clr-secondary-dark);
-        width: 350px;
-        height: 2.5rem;
-        text-transform: uppercase;
-        color: var(--clr-white);
 
-    }
 
     .cart-item-add-btn {
         background-color: var(--clr-secondary-dark);
@@ -1924,11 +2282,119 @@ ____________________*/
     }
 
     .sloganP {
-
+        font-size: 1rem;
         margin-left: 10px;
     }
 
     .cart-item-count {
-        right: 28rem;
+        right: 23rem;
     }
+
+
+
+    /*gallery*/
+    .gallery-section {
+
+        margin: 0 auto;
+    }
+
+    .gallery-container {
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "LongUp LongUp longSide1 longSide1 longSide1 longSide1 sqaure6 sqaure6"
+            "LongUp LongUp longSide1 longSide1 longSide1 longSide1 sqaure6 sqaure6"
+            "LongUp LongUp sqaure2 sqaure2 sqaure3 sqaure3 sqaure5 sqaure5"
+            "LongUp LongUp sqaure2 sqaure2 sqaure3 sqaure3 sqaure5 sqaure5"
+            "sqaure1 sqaure1 sqaure4 sqaure4 longside2 longside2 longside2 longside2"
+            "sqaure1 sqaure1 sqaure4 sqaure4 longside2 longside2 longside2 longside2";
+    }
+
+    .LongUp {
+        grid-area: LongUp;
+    }
+
+    .sqaure1 {
+        grid-area: sqaure1;
+    }
+
+    .longSide1 {
+        grid-area: longSide1;
+    }
+
+    .sqaure2 {
+        grid-area: sqaure2;
+    }
+
+    .sqaure3 {
+        grid-area: sqaure3;
+    }
+
+    .sqaure4 {
+        grid-area: sqaure4;
+    }
+
+    .longside2 {
+        grid-area: longside2;
+    }
+
+    .sqaure5 {
+        grid-area: sqaure5;
+    }
+
+    .sqaure6 {
+        grid-area: sqaure6;
+    }
+
+    .mainContainer {
+        width: 80vw;
+    }
+
+    .allProducts-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .hero-woman {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/womanBanner.jpg) center/cover no-repeat;
+    }
+
+    .hero-men {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/manBanner.jpg) center/cover no-repeat;
+    }
+
+    .hero-sunglasses {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/sunglassesBanner.jpg) center/cover no-repeat;
+    }
+
+    .hero-shoes {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/shoesBanner.jpg) center/cover no-repeat;
+    }
+
+    .hero-accesories {
+        height: 100vh;
+        top: 50vh;
+        padding: 200px 150px;
+        background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/acBanner.jpg) center/cover no-repeat;
+    }
+
+
 }

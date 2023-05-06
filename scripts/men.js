@@ -3,7 +3,6 @@
 const sidebarToggle = document.querySelector(".sidebar-toggle");
 const cartContainer = document.querySelector(".cart-container");
 const cart = document.querySelector(".cart-dropdown");
-const closeBTN = document.querySelector("cart-btn");
 
 sidebarToggle.addEventListener("click", function () {
   if (cart.classList.contains("show-cart")) {
@@ -16,6 +15,10 @@ sidebarToggle.addEventListener("click", function () {
 const productsE1 = document.querySelector(".products-container");
 const cartItemsE1 = document.querySelector(".cart-items");
 const subTotalE1 = document.querySelector(".cart-total");
+const cartAmountE1 = document.querySelector(".cart-item-count");
+const closeBTN = document.querySelector(".cart-close");
+const navToggle = document.querySelector(".nav-toggle");
+const checkoutBTN = document.querySelector(".cart-checkout");
 
 function renderProducts() {
   products.forEach((product) => {
@@ -149,3 +152,46 @@ function renderCartAmount() {
   });
   cartAmountE1.innerHTML = ` ${totalItems}`;
 }
+
+closeBTN.addEventListener("click", function () {
+  if (cart.classList.contains("show-cart")) {
+    cart.classList.remove("show-cart");
+  }
+});
+
+navToggle.addEventListener("click", function () {
+  links.classList.toggle("show-links");
+});
+
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+checkoutBTN.addEventListener("click", () => {
+  localStorage.clear();
+
+  cartItemsE1.innerHTML = "";
+  cartAmountE1.innerHTML = `0`;
+  subTotalE1.innerHTML = ` <h5 class="cart-total">(0 items) Total : R 0 </h5>`;
+  // Display a confirmation message
+  alert("Thank you for your purchase!");
+});

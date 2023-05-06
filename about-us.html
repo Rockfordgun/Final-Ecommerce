@@ -62,39 +62,40 @@
       <div class="social-icons">
         <ul class="social-ul">
           <li>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
           </li>
           <li>
-            <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="https://za.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a>
           </li>
           <li>
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
           </li>
           <li>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
           </li>
         </ul>
       </div>
     </nav>
 
     <nav id="shopNav">
+
       <div class="shopNav-center">
-        <input type="text" placeholder="Search Product" class="search" />
+        <input type="text" placeholder="Search Product" class="search">
 
-        <div></div>
-        <p class="sloganP">We Are Open24 Hours A Day | Shop Till You Drop</p>
+        
+      <p class="sloganP">Join the Fashion Royalty - Contact The Royal Runaway Today and Rule the Runway!</p>
 
-        <div class="shop-icons">
-          <ul class="shop-list">
-            <li class="shopli"><i class="fa-solid fa-headset"></i></li>
-            <li class="shopli"><i class="fa-solid fa-star"></i></li>
-            <button class="sidebar-toggle">
-              <li class="shopli">
-                <i class="fa-solid fa-basket-shopping"></i>
-              </li>
-            </button>
-          </ul>
+      <div class="shop-icons">
+        <ul class="shop-list">
+          <li class="shopli"><i class="fa-solid fa-headset"></i></li>
+          <li class="shopli"><i class="fa-solid fa-star"></i></li>
+          <div class="toggle-container">
+          <button class="sidebar-toggle"> <li class="shopli"><i class="fa-solid fa-basket-shopping"></i></li></button>
+          <span class="cart-item-count">0</span>
         </div>
+
+        </ul>
+      </div>
       </div>
     </nav>
     <!--Navigation END-->
@@ -157,7 +158,7 @@
           <h4>Discover Fashion Royalty with</h4>
           <hr />
           <h2> The Royal Runaway!</h2>
-          <a href="#" class="btn btnHero scroll-link">Shop Now</a>
+
         </div>
       </div>
     </header>
@@ -170,7 +171,7 @@
           <div class="toggleDD">
             <button type="button" class="btn_NA">about us</button>
           </div>
-          <div class="icon"><i class="fa-solid fa-angle-down"></i></div>
+
         </div>
       </div>
 
@@ -436,7 +437,9 @@
     </section>
     <!-- Carousel wrapper -->
     
-
+    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <!-- Footer START-->
     <footer id="footer">
@@ -467,9 +470,9 @@
            <div class="f-tab-2">
              <div class="f-2-title"><h3 class="text-white">company</h3></div>
              <ul class="f-company list-unstyled text-white">
-               <li>About Us</li>
-               <li>Contact Us</li>
-               <li>Blog</li>
+               <li><a href="./about-us.html">About Us</a></li>
+               <li><a href="./contact-us.html">Contact Us</a></li>
+               <li><a href="./blog.html">Blog</a></li>
              </ul>
            </div>
          </div>
@@ -480,7 +483,7 @@
                <li>Customer Service</li>
                <li>My Account</li>
                <li>Find A Store</li>
-               <li>Contact</li>
+               <li><a href="./contact-us.html">Contact</a></li>
          
              </ul>
            </div>
@@ -524,7 +527,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./scripts/script.js"></script>
+   
+    <script src="./scripts/productDB.js"></script>
+    <script src="./scripts/otherPages.js"></script>
+
     <!--
         <script type="module" src="./index.js"></script>
        -->
