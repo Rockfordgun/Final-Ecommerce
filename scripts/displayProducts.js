@@ -18,6 +18,7 @@ const subTotalE1 = document.querySelector(".cart-total");
 const cartAmountE1 = document.querySelector(".cart-item-count");
 const closeBTN = document.querySelector(".cart-close");
 const navToggle = document.querySelector(".nav-toggle");
+const checkoutBTN = document.querySelector(".cart-checkout");
 
 function renderProducts() {
   products.forEach((product) => {
@@ -160,6 +161,16 @@ closeBTN.addEventListener("click", function () {
 
 navToggle.addEventListener("click", function () {
   links.classList.toggle("show-links");
+});
+
+checkoutBTN.addEventListener("click", () => {
+  localStorage.clear();
+
+  cartItemsE1.innerHTML = "";
+  cartAmountE1.innerHTML = `0`;
+  subTotalE1.innerHTML = ` <h5 class="cart-total">(0 items) Total : R 0 </h5>`;
+  // Display a confirmation message
+  alert("Thank you for your purchase!");
 });
 
 //Get the button
